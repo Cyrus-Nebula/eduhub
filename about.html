@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于本站 - Nebula EduHub</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- 导航栏 -->
+<nav class="navbar">
+    <div class="container nav-inner">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="NebulaEduHub" class="logo-icon">
+            <span class="logo-text">Nebula<span>EduHub</span></span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="search.html">资料汇总</a></li>
+            <li><a href="tools.html">下载工具</a></li>
+            <li><a href="packages.html">网校通服务</a></li>
+            <li><a href="about.html" class="active">关于本站</a></li>
+            <li><a href="#contact" class="nav-cta">联系站主</a></li>
+        </ul>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+</nav>
+
+<!-- 页面标题 -->
+<section class="page-hero">
+    <div class="container">
+        <div class="badge">📖 关于本站</div>
+        <h1>关于<span>Nebula EduHub</span></h1>
+        <p>一个专注于中小学学习资料整理与分享的平台，让找资料不再麻烦。</p>
+    </div>
+</section>
+
+<!-- 关于内容 -->
+<section class="section" style="padding-top:10px;">
+    <div class="container">
+        <div class="about-content">
+            <h3>本站简介</h3>
+            <p>Nebula EduHub 是个人搭建的学习资料归档索引平台，主要用途是整理、检索、标记收集到的各类教学资料，保存资料标签与备注索引，方便自己和身边同学快速查找。</p>
+            <p>网站以学习资料归档为主，同时提供学科网网校通开通、下载工具等副业服务。所有资料索引均来源于网络收集，部分为本人整理制作。</p>
+
+            <h4>我们提供什么</h4>
+            <ul>
+                <li><strong>资料索引：</strong>中小学各科试卷、教案、课件、讲义、电子课本的分类索引，方便快速定位。</li>
+                <li><strong>网校通开通：</strong>学科网网校通账号正规渠道开通，绑定自己手机号，海量资源免费下载。</li>
+                <li><strong>下载工具：</strong>组卷网批量下载器、AI智能解答脚本等实用工具，提升资料收集效率。</li>
+                <li><strong>持续更新：</strong>资料和工具持续更新维护，加微信第一时间获取最新资源。</li>
+            </ul>
+        </div>
+
+        <!-- 联系方式 -->
+        <div id="contact" class="section-header" style="margin-top:50px;">
+            <span class="section-tag">💬 联系我们</span>
+            <h2 class="section-title">立即咨询购买</h2>
+            <p class="section-desc">添加微信/QQ，获取最新优惠和免费资料，有问必答</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="contact-icon" style="background:#dcfce7;">💬</div>
+                <div class="label">微信咨询</div>
+                <img src="images/wechat.png" alt="微信二维码" style="width:160px;height:160px;margin:12px auto;border-radius:8px;display:block;">
+                <div class="hint">扫码添加微信，备注"资料站"</div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon" style="background:#dbeafe;">🐧</div>
+                <div class="label">QQ咨询</div>
+                <img src="images/qq.png" alt="QQ二维码" style="width:160px;height:160px;margin:12px auto;border-radius:8px;display:block;">
+                <div class="hint">扫码添加QQ，工作时间 9:00 - 22:00</div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon" style="background:#fce7f3;">📕</div>
+                <div class="label">小红书</div>
+                <img src="images/xiaohongshu.png" alt="小红书二维码" style="width:160px;height:160px;margin:12px auto;border-radius:8px;display:block;">
+                <div class="hint">扫码关注小红书，获取最新资料动态</div>
+            </div>
+        </div>
+
+        <div style="text-align:center;margin-top:24px;">
+            <p style="font-size:13px;color:var(--text-muted);">仅用于咨询网校通、工具业务；不提供公开资源下载，谢谢理解。</p>
+        </div>
+
+        <!-- 免责声明 -->
+        <div class="about-content" style="margin-top:40px;">
+            <h3>免责声明</h3>
+            <p>1. 本站所有资料索引均来源于网络，版权归原作者及本人（部分）所有。本站仅做索引整理，不直接存放、分发原版文件。</p>
+            <p>2. 网校通、下载工具属于副业业务，均为官方正规渠道或合法脚本，安全稳定，售后有保障。</p>
+            <p>3. 本站资料仅供个人学习参考使用，请勿用于商业用途。如涉及版权问题，请联系我们及时处理。</p>
+            <p>4. 本站不对用户使用资料或工具产生的任何直接或间接损失承担责任。</p>
+        </div>
+    </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="footer-new">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="NebulaEduHub" class="logo-icon">
+                    <span>Nebula<span>EduHub</span></span>
+                </div>
+                <p class="footer-desc">整理分享学习资料，涵盖试卷、电子课本、教辅、实用工具。</p>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">快速链接</h4>
+                <ul class="footer-list">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="search.html">资料汇总</a></li>
+                    <li><a href="tools.html">下载工具</a></li>
+                    <li><a href="packages.html">网校通服务</a></li>
+                    <li><a href="about.html">关于本站</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">资源链接</h4>
+                <ul class="footer-list">
+                    <li><a href="search.html">资料汇总</a></li>
+                    <li><a href="packages.html">网校通服务</a></li>
+                    <li><a href="tools.html">下载工具</a></li>
+                    <li><a href="https://xhslink.cn/m/7uavnstEfuR" target="_blank">小红书主页</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">联系我们</h4>
+                <ul class="footer-list">
+                    <li><i class="fa-solid fa-envelope footer-icon"></i>邮箱：<a href="mailto:3616927242@qq.com">3616927242@qq.com</a></li>
+                    <li><span style="visibility:hidden;">邮箱：</span>nebula_eduhub@163.com</li>
+                    <li><i class="fa-solid fa-location-dot footer-icon"></i>西安搞机ZP集团</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>NebulaEduHub © 2026 版权所有</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

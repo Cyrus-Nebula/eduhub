@@ -1,0 +1,4 @@
+materials/
+*.pdf
+.DS_Store
+*.log

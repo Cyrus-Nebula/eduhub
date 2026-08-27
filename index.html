@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebula EduHub - 中小学学习资料一站式平台</title>
+    <meta name="description" content="学科网网校通账号开通、更多有趣工具，还有各种资料获取，统统一次性搞定。">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- 导航栏 -->
+<nav class="navbar">
+    <div class="container nav-inner">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="NebulaEduHub" class="logo-icon">
+            <span class="logo-text">Nebula<span>EduHub</span></span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">首页</a></li>
+            <li><a href="search.html">资料汇总</a></li>
+            <li><a href="tools.html">下载工具</a></li>
+            <li><a href="packages.html">网校通服务</a></li>
+            <li><a href="about.html">关于本站</a></li>
+            <li><a href="about.html#contact" class="nav-cta">联系站主</a></li>
+        </ul>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-badge">Nebula Eduhub</div>
+        <h1>Hi，别来无恙呀！<br><span>欢迎来到 Nebula 的网站</span></h1>
+        <p>学科网网校通账号开通、更多有趣工具，还有各种资料获取，统统一次性搞定。</p>
+        <div class="hero-buttons">
+            <a href="packages.html" class="btn btn-primary">开通网校通 →</a>
+            <a href="search.html" class="btn btn-outline">浏览资料</a>
+        </div>
+    </div>
+</section>
+
+<!-- 主推：网校通 -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">⭐ 最受欢迎</span>
+            <h2 class="section-title">学科网网校通</h2>
+            <p class="section-desc">开通自己的账号，海量资源免费下</p>
+        </div>
+
+        <div class="featured-card">
+            <div>
+                <span class="featured-badge">🔥 热销推荐</span>
+                <h3>学科网网校通账号开通</h3>
+                <p>官方正规渠道开通，绑定你自己的手机号，除第三方代售资源外全部免费下载。</p>
+                <ul class="featured-list">
+                    <li>全科/单科任选，按天下载额度</li>
+                    <li>开通后绑定自己的手机号</li>
+                    <li>除第三方代售外全部免费</li>
+                    <li>支持月付/年付，灵活选择</li>
+                    <li>实名认证后立即开通使用</li>
+                    <li>售后有保障，长期维护</li>
+                </ul>
+            </div>
+            <div class="featured-price">
+                <div class="label">年卡低至</div>
+                <div class="amount">¥100<small>/年起</small></div>
+                <a href="packages.html" class="btn btn-primary">查看套餐详情</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 热门资料 -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">📂 资料分享</span>
+            <h2 class="section-title">热门学习资料</h2>
+            <p class="section-desc">电子课本、试卷真题、教案课件，持续更新中</p>
+        </div>
+
+        <div class="filter-tabs">
+            <button class="filter-tab active" onclick="filterResources(this,'all')">全部</button>
+            <button class="filter-tab" onclick="filterResources(this,'english')">英语</button>
+            <button class="filter-tab" onclick="filterResources(this,'math')">数学</button>
+            <button class="filter-tab" onclick="filterResources(this,'chinese')">语文</button>
+            <button class="filter-tab" onclick="filterResources(this,'physics')">物理</button>
+            <button class="filter-tab" onclick="filterResources(this,'chemistry')">化学</button>
+            <button class="filter-tab" onclick="filterResources(this,'plan')">教案课件</button>
+        </div>
+
+        <div class="resource-grid">
+            <!-- 资料1 -->
+            <div class="resource-card" data-cat="english">
+                <div class="resource-icon" style="background:#dbeafe;">📘</div>
+                <span class="resource-type type-free">电子课本 · 免费</span>
+                <h4>人教版英语九年级上册（官方版）</h4>
+                <div class="resource-meta">
+                    <span>📅 官方版</span>
+                    <span>📄 PDF · 12MB</span>
+                </div>
+                <p class="resource-desc">人教版九年级上册英语电子课本，高清PDF，可打印可在线阅读，配套课文音频。</p>
+                <div class="resource-footer">
+                    <span class="resource-price free">免费</span>
+                    <div style="display:flex;gap:6px;">
+                        <a href="materials/电子课本/人教版英语九年级上册.pdf" target="_blank" class="resource-btn btn-get" style="background:#eff6ff;color:#2563eb;">预览</a>
+                        <a href="materials/电子课本/人教版英语九年级上册.pdf" download class="resource-btn btn-buy">下载</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 资料2 -->
+            <div class="resource-card" data-cat="english">
+                <div class="resource-icon" style="background:#dcfce7;">📗</div>
+                <span class="resource-type type-free">电子课本 · 免费</span>
+                <h4>人教版英语八年级下册</h4>
+                <div class="resource-meta">
+                    <span>📅 人教版</span>
+                    <span>📄 PDF · 18MB</span>
+                </div>
+                <p class="resource-desc">人教版八年级下册英语课本完整PDF，包含全部单元课文、单词表、语法讲解，适合预习复习。</p>
+                <div class="resource-footer">
+                    <span class="resource-price free">免费</span>
+                    <div style="display:flex;gap:6px;">
+                        <a href="materials/电子课本/人教版英语八年级下册.pdf" target="_blank" class="resource-btn btn-get" style="background:#eff6ff;color:#2563eb;">预览</a>
+                        <a href="materials/电子课本/人教版英语八年级下册.pdf" download class="resource-btn btn-buy">下载</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 资料3 -->
+            <div class="resource-card" data-cat="math">
+                <div class="resource-icon" style="background:#fef3c7;">📝</div>
+                <span class="resource-type type-free">试卷真题 · 免费</span>
+                <h4>2026年陕西省中考数学试题</h4>
+                <div class="resource-meta">
+                    <span>📅 2026</span>
+                    <span>📄 PDF · 1.2MB</span>
+                    <span>📕 小红书同步</span>
+                </div>
+                <p class="resource-desc">2026年陕西省中考数学试题，含答案解析，可直接打印使用。小红书同步更新解析。</p>
+                <div class="resource-footer">
+                    <span class="resource-price free">免费</span>
+                    <div style="display:flex;gap:6px;">
+                        <a href="https://xhslink.cn/o/3DAHQDqtNqr" target="_blank" class="resource-btn btn-get" style="background:#fce7f3;color:#be185d;">小红书</a>
+                        <a href="materials/专题训练/2026年陕西省中考数学试题.pdf" target="_blank" class="resource-btn btn-get" style="background:#eff6ff;color:#2563eb;">预览</a>
+                        <a href="materials/专题训练/2026年陕西省中考数学试题.pdf" download class="resource-btn btn-buy">下载</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 资料4 -->
+            <div class="resource-card" data-cat="math">
+                <div class="resource-icon" style="background:#e0e7ff;">📐</div>
+                <span class="resource-type type-free">教辅资料 · 免费</span>
+                <h4>全品作业本九上数学 第一章 特殊平行四边形</h4>
+                <div class="resource-meta">
+                    <span>📅 九年级上册</span>
+                    <span>📄 PDF · 8.6MB</span>
+                </div>
+                <p class="resource-desc">全品作业本九年级上册数学第一章特殊平行四边形，配套练习，知识点覆盖全面，含详细答案。</p>
+                <div class="resource-footer">
+                    <span class="resource-price free">免费</span>
+                    <div style="display:flex;gap:6px;">
+                        <a href="materials/全品作业本/全品作业本九上数学_第一章特殊平行四边形.pdf" target="_blank" class="resource-btn btn-get" style="background:#eff6ff;color:#2563eb;">预览</a>
+                        <a href="materials/全品作业本/全品作业本九上数学_第一章特殊平行四边形.pdf" download class="resource-btn btn-buy">下载</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 资料5 -->
+            <div class="resource-card" data-cat="math">
+                <div class="resource-icon" style="background:#fce7f3;">🎯</div>
+                <span class="resource-type type-free">专题训练 · 免费</span>
+                <h4>二次函数专题1 求目标点横纵比大小</h4>
+                <div class="resource-meta">
+                    <span>📅 中考专题</span>
+                    <span>📄 PDF · 4.0MB</span>
+                </div>
+                <p class="resource-desc">中考数学二次函数压轴题专题训练，求目标点横纵比大小等经典题型，附带详细解题步骤和答案。</p>
+                <div class="resource-footer">
+                    <span class="resource-price free">免费</span>
+                    <div style="display:flex;gap:6px;">
+                        <a href="materials/专题训练/二次函数专题1_求目标点横纵比大小.pdf" target="_blank" class="resource-btn btn-get" style="background:#eff6ff;color:#2563eb;">预览</a>
+                        <a href="materials/专题训练/二次函数专题1_求目标点横纵比大小.pdf" download class="resource-btn btn-buy">下载</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 资料6 -->
+            <div class="resource-card" data-cat="plan">
+                <div class="resource-icon" style="background:#fee2e2;">📕</div>
+                <span class="resource-type type-free">高中教材 · 免费</span>
+                <h4>高中数学A版 必修第一册</h4>
+                <div class="resource-meta">
+                    <span>📅 高中必修</span>
+                    <span>📄 PDF · 22MB</span>
+                </div>
+                <p class="resource-desc">高中数学A版必修第一册教材，高清PDF，包含集合、函数、指数对数等内容，适合预习复习。</p>
+                <div class="resource-footer">
+                    <span class="resource-price free">免费</span>
+                    <div style="display:flex;gap:6px;">
+                        <a href="materials/高中数学/高中数学A版_数学 必修 第一册（A版）.pdf" target="_blank" class="resource-btn btn-get" style="background:#eff6ff;color:#2563eb;">预览</a>
+                        <a href="materials/高中数学/高中数学A版_数学 必修 第一册（A版）.pdf" download class="resource-btn btn-buy">下载</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center;margin-top:30px;">
+            <a href="search.html" class="btn btn-outline">查看全部资料 →</a>
+        </div>
+    </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="footer-new">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="NebulaEduHub" class="logo-icon">
+                    <span>Nebula<span>EduHub</span></span>
+                </div>
+                <p class="footer-desc">整理分享学习资料，涵盖试卷、电子课本、教辅、实用工具。</p>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">快速链接</h4>
+                <ul class="footer-list">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="search.html">资料汇总</a></li>
+                    <li><a href="tools.html">下载工具</a></li>
+                    <li><a href="packages.html">网校通服务</a></li>
+                    <li><a href="about.html">关于本站</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">资源链接</h4>
+                <ul class="footer-list">
+                    <li><a href="search.html">资料汇总</a></li>
+                    <li><a href="packages.html">网校通服务</a></li>
+                    <li><a href="tools.html">下载工具</a></li>
+                      <li><a href="https://xhslink.cn/m/7uavnstEfuR" target="_blank">小红书主页</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">联系我们</h4>
+                <ul class="footer-list">
+                    <li><i class="fa-solid fa-envelope footer-icon"></i>邮箱：<a href="mailto:3616927242@qq.com">3616927242@qq.com</a></li>
+                    <li><span style="visibility:hidden;">邮箱：</span>nebula_eduhub@163.com</li>
+                     <li><i class="fa-solid fa-location-dot footer-icon"></i>西安搞机ZP集团</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>NebulaEduHub © 2026 版权所有</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
