@@ -14,10 +14,10 @@
   function setFavicon(dark){
     var s=dark?'dark':'light';
     document.querySelectorAll('link[data-favicon]').forEach(function(l){
-      l.href='favicon-'+s+'-32.png?v=2';
+      l.href='favicon-'+s+'-32.png?v=3';
     });
     var ati=document.querySelector('link[rel="apple-touch-icon"]');
-    if(ati) ati.href='apple-touch-icon-'+s+'.png?v=2';
+    if(ati) ati.href='apple-touch-icon-'+s+'.png?v=3';
   }
   var mq=window.matchMedia('(prefers-color-scheme: dark)');
   setFavicon(mq.matches);
