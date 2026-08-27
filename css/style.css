@@ -828,7 +828,7 @@ a:hover { text-decoration: underline; }
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1.5fr 1fr 1.2fr;
   gap: 32px;
   margin-bottom: 32px;
 }
