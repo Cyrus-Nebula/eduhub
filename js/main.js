@@ -1,165 +1,116 @@
-/* ===== Nebula EduHub 交互脚本 ===== */
-
-// 移动端菜单切换
+// Nebula EduHub 前端交互
 function toggleMenu() {
-    const links = document.getElementById('navLinks');
-    if (links) {
-        links.classList.toggle('mobile-open');
-    }
+    var links = document.getElementById('navLinks');
+    if (links) links.classList.toggle('mobile-open');
 }
 
-// 首页资料分类筛选
 function filterResources(btn, cat) {
-    document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.filter-tab').forEach(function (t) { t.classList.remove('active'); });
     if (btn) btn.classList.add('active');
-    document.querySelectorAll('.material-card').forEach(card => {
-        const cats = card.getAttribute('data-cat') || '';
-        if (cat === 'all' || cats.includes(cat)) {
-            card.style.display = 'flex';
-        } else {
-            card.style.display = 'none';
-        }
+    document.querySelectorAll('.material-card').forEach(function (card) {
+        var cats = card.getAttribute('data-cat') || '';
+        card.style.display = (cat === 'all' || cats.indexOf(cat) > -1) ? 'flex' : 'none';
     });
 }
 
-// 搜索页 - 关键词搜索
 function doSearch() {
-    const kw = document.getElementById('searchInput');
+    var kw = document.getElementById('searchInput');
     if (!kw) return;
-    const keyword = kw.value.trim().toLowerCase();
-    const rows = document.querySelectorAll('.resource-row');
-    let count = 0;
-    rows.forEach(row => {
-        const name = (row.getAttribute('data-name') || '').toLowerCase();
-        const grade = (row.getAttribute('data-grade') || '').toLowerCase();
-        const subject = (row.getAttribute('data-subject') || '').toLowerCase();
-        const type = (row.getAttribute('data-type') || '').toLowerCase();
-        const note = (row.querySelector('.note')?.textContent || '').toLowerCase();
-        if (!keyword || name.includes(keyword) || grade.includes(keyword) || subject.includes(keyword) || type.includes(keyword) || note.includes(keyword)) {
-            row.style.display = 'flex';
-            count++;
-        } else {
-            row.style.display = 'none';
-        }
+    var keyword = kw.value.trim().toLowerCase();
+    document.querySelectorAll('.resource-row').forEach(function (row) {
+        var name = (row.getAttribute('data-name') || '').toLowerCase();
+        var grade = (row.getAttribute('data-grade') || '').toLowerCase();
+        var subject = (row.getAttribute('data-subject') || '').toLowerCase();
+        var type = (row.getAttribute('data-type') || '').toLowerCase();
+        var note = (row.querySelector('.note') ? row.querySelector('.note').textContent : '').toLowerCase();
+        var hit = !keyword || name.indexOf(keyword) > -1 || grade.indexOf(keyword) > -1
+            || subject.indexOf(keyword) > -1 || type.indexOf(keyword) > -1 || note.indexOf(keyword) > -1;
+        row.style.display = hit ? 'flex' : 'none';
     });
 }
 
-// 搜索页 - 下拉筛选
 function applyFilter() {
-    const grade = document.getElementById('filterGrade')?.value || '';
-    const subject = document.getElementById('filterSubject')?.value || '';
-    const type = document.getElementById('filterType')?.value || '';
-    const keyword = document.getElementById('searchInput')?.value.trim().toLowerCase() || '';
+    var grade = (document.getElementById('filterGrade') || {}).value || '';
+    var subject = (document.getElementById('filterSubject') || {}).value || '';
+    var type = (document.getElementById('filterType') || {}).value || '';
+    var keyword = ((document.getElementById('searchInput') || {}).value || '').trim().toLowerCase();
 
-    document.querySelectorAll('.resource-row').forEach(row => {
-        const rowGrade = row.getAttribute('data-grade') || '';
-        const rowSubject = row.getAttribute('data-subject') || '';
-        const rowType = row.getAttribute('data-type') || '';
-        const rowName = (row.getAttribute('data-name') || '').toLowerCase();
-        const rowNote = (row.querySelector('.note')?.textContent || '').toLowerCase();
+    document.querySelectorAll('.resource-row').forEach(function (row) {
+        var rg = row.getAttribute('data-grade') || '';
+        var rs = row.getAttribute('data-subject') || '';
+        var rt = row.getAttribute('data-type') || '';
+        var rn = (row.getAttribute('data-name') || '').toLowerCase();
+        var rnote = (row.querySelector('.note') ? row.querySelector('.note').textContent : '').toLowerCase();
 
-        const matchGrade = !grade || rowGrade === grade || rowGrade.includes(grade) || grade.includes(rowGrade);
-        const matchSubject = !subject || rowSubject === subject;
-        const matchType = !type || rowType === type;
-        const matchKeyword = !keyword || rowName.includes(keyword) || rowNote.includes(keyword) || rowSubject.toLowerCase().includes(keyword) || rowGrade.toLowerCase().includes(keyword);
+        var ok = (!grade || rg === grade || rg.indexOf(grade) > -1 || grade.indexOf(rg) > -1)
+            && (!subject || rs === subject)
+            && (!type || rt === type)
+            && (!keyword || rn.indexOf(keyword) > -1 || rnote.indexOf(keyword) > -1
+                || rs.toLowerCase().indexOf(keyword) > -1 || rg.toLowerCase().indexOf(keyword) > -1);
 
-        if (matchGrade && matchSubject && matchType && matchKeyword) {
-            row.style.display = 'flex';
-        } else {
-            row.style.display = 'none';
-        }
+        row.style.display = ok ? 'flex' : 'none';
     });
 }
 
-// 重置筛选
 function resetFilter() {
-    const grade = document.getElementById('filterGrade');
-    const subject = document.getElementById('filterSubject');
-    const type = document.getElementById('filterType');
-    const search = document.getElementById('searchInput');
-    if (grade) grade.value = '';
-    if (subject) subject.value = '';
-    if (type) type.value = '';
-    if (search) search.value = '';
-    document.querySelectorAll('.resource-row').forEach(row => row.style.display = 'flex');
+    ['filterGrade', 'filterSubject', 'filterType', 'searchInput'].forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) el.value = '';
+    });
+    document.querySelectorAll('.resource-row').forEach(function (row) { row.style.display = 'flex'; });
 }
 
-// 通用复制函数
 function copyText(text, btn) {
-    const oldText = btn.textContent;
-    const oldBg = btn.style.background;
-    const oldColor = btn.style.color;
-    const oldBorder = btn.style.borderColor;
-
-    const done = () => {
+    var orig = btn.textContent;
+    var origStyle = btn.style.cssText;
+    function done() {
         btn.textContent = '已复制 ✓';
-        btn.style.background = '#dcfce7';
-        btn.style.color = '#16a34a';
-        btn.style.borderColor = '#86efac';
-        setTimeout(() => {
-            btn.textContent = oldText;
-            btn.style.background = oldBg;
-            btn.style.color = oldColor;
-            btn.style.borderColor = oldBorder;
+        btn.style.cssText = 'background:#dcfce7;color:#16a34a;border-color:#86efac;';
+        setTimeout(function () {
+            btn.textContent = orig;
+            btn.style.cssText = origStyle;
         }, 2000);
-    };
-
+    }
     if (navigator.clipboard) {
-        navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(text, done));
+        navigator.clipboard.writeText(text).then(done).catch(function () { fallbackCopy(text, done); });
     } else {
         fallbackCopy(text, done);
     }
 }
 
-function fallbackCopy(text, callback) {
-    const ta = document.createElement('textarea');
+function fallbackCopy(text, cb) {
+    var ta = document.createElement('textarea');
     ta.value = text;
-    ta.style.position = 'fixed';
-    ta.style.opacity = '0';
+    ta.style.cssText = 'position:fixed;opacity:0;';
     document.body.appendChild(ta);
     ta.select();
-    try { document.execCommand('copy'); } catch(e) {}
+    try { document.execCommand('copy'); } catch (e) {}
     document.body.removeChild(ta);
-    if (callback) callback();
+    if (cb) cb();
 }
 
-// 复制微信号
-function copyWechat(btn) {
-    copyText('17795600558', btn);
-}
+function copyWechat(btn) { copyText('17795600558', btn); }
+function copyQQ(btn) { copyText('3616927242', btn); }
+function copyXhs(btn) { copyText('Nebula_official', btn); }
 
-// 复制QQ号
-function copyQQ(btn) {
-    copyText('3616927242', btn);
-}
-
-// 复制小红书号
-function copyXhs(btn) {
-    copyText('Nebula_official', btn);
-}
-
-// 页面加载完成后
-document.addEventListener('DOMContentLoaded', function() {
-    // 如果URL带了搜索关键词，自动填入并搜索
-    const params = new URLSearchParams(window.location.search);
-    const kw = params.get('kw');
+document.addEventListener('DOMContentLoaded', function () {
+    // URL带kw参数时自动搜索
+    var kw = new URLSearchParams(window.location.search).get('kw');
     if (kw && document.getElementById('searchInput')) {
         document.getElementById('searchInput').value = kw;
         doSearch();
     }
-
-    // 点击导航链接后关闭移动端菜单
-    document.querySelectorAll('.nav-links a').forEach(a => {
-        a.addEventListener('click', () => {
-            const links = document.getElementById('navLinks');
+    // 点导航后收起移动端菜单
+    document.querySelectorAll('.nav-links a').forEach(function (a) {
+        a.addEventListener('click', function () {
+            var links = document.getElementById('navLinks');
             if (links) links.classList.remove('mobile-open');
         });
     });
-
-    // 平滑滚动（锚点链接）
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-        a.addEventListener('click', function(e) {
-            const target = document.querySelector(this.getAttribute('href'));
+    // 锚点平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+        a.addEventListener('click', function (e) {
+            var target = document.querySelector(this.getAttribute('href'));
             if (target) {
                 e.preventDefault();
                 target.scrollIntoView({ behavior: 'smooth', block: 'start' });

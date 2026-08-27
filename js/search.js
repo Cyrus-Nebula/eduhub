@@ -1,7 +1,4 @@
-/**
- * Nebula EduHub - 资料汇总页逻辑
- * 包含资料数据、筛选、渲染、预览/下载等功能
- */
+// 资料汇总页逻辑
 function getCoverForSubject(subject) {
     if (!subject) return 'images/cover_general.jpg';
     if (subject.includes('语文')) return 'images/cover_chinese.jpg';

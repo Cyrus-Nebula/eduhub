@@ -1,4 +1,4 @@
-/* ===== Nebula EduHub 统一样式（资深老程序员重构版） ===== */
+/* Nebula EduHub style */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
@@ -44,7 +44,7 @@ body {
 a { color: var(--primary); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* ===== 导航栏 ===== */
+/* 导航栏 */
 .navbar {
   background: #fff;
   border-bottom: 1px solid var(--border);
@@ -118,7 +118,7 @@ a:hover { text-decoration: underline; }
   padding: 4px 8px;
 }
 
-/* ===== 页面标题区 ===== */
+/* 页面标题区 */
 .page-hero {
   padding: 48px 0 28px;
   text-align: center;
@@ -147,7 +147,7 @@ a:hover { text-decoration: underline; }
   margin: 0 auto;
 }
 
-/* ===== Hero（首页用，保持原样） ===== */
+/* hero */
 .hero {
   position: relative;
   min-height: calc(100vh - var(--nav-height));
@@ -210,7 +210,7 @@ a:hover { text-decoration: underline; }
   flex-wrap: wrap;
 }
 
-/* ===== 按钮 ===== */
+/* 按钮 */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -252,7 +252,7 @@ a:hover { text-decoration: underline; }
 .btn-accent:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
 .btn-sm { padding: 7px 16px; font-size: 13px; }
 
-/* ===== 数据统计 ===== */
+/* 数据统计 */
 .stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -277,7 +277,7 @@ a:hover { text-decoration: underline; }
 .stat-number sup { font-size: 14px; vertical-align: super; }
 .stat-label { font-size: 13px; color: var(--text-secondary); }
 
-/* ===== 区块通用 ===== */
+/* 区块通用 */
 .section { padding: 56px 0; }
 .section-tight { padding-top: 12px; }
 .section-alt {
@@ -303,7 +303,7 @@ a:hover { text-decoration: underline; }
 }
 .section-desc { font-size: 14px; color: var(--text-secondary); }
 
-/* ===== 主推产品卡 ===== */
+/* 主推产品卡 */
 .featured-card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -373,7 +373,7 @@ a:hover { text-decoration: underline; }
   padding: 8px 16px;
 }
 
-/* ===== 筛选标签 ===== */
+/* 筛选标签 */
 .filter-tabs {
   display: flex;
   gap: 8px;
@@ -428,7 +428,7 @@ a:hover { text-decoration: underline; }
 }
 .filter-bar .btn { align-self: flex-end; }
 
-/* ===== 资料卡片网格 ===== */
+/* 资料卡片网格 */
 .resource-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -527,7 +527,7 @@ a:hover { text-decoration: underline; }
 .text-pink   { color: #db2777; }
 .text-red    { color: #dc2626; }
 
-/* ===== 价格表 ===== */
+/* 价格表 */
 .pricing-wrap {
   background: white;
   border: 1px solid var(--border);
@@ -601,7 +601,7 @@ a:hover { text-decoration: underline; }
 .package-card li::before { content: '✓'; color: var(--success); font-weight: 600; }
 .package-card .btn { width: 100%; justify-content: center; }
 
-/* ===== 工具卡片 ===== */
+/* 工具卡片 */
 .tool-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -661,7 +661,7 @@ a:hover { text-decoration: underline; }
 .tool-price { font-size: 16px; font-weight: 600; color: var(--accent-dark); }
 .tool-price small { font-size: 12px; font-weight: 500; color: var(--text-muted); }
 
-/* ===== 流程步骤 ===== */
+/* 流程步骤 */
 .steps {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -690,7 +690,7 @@ a:hover { text-decoration: underline; }
 .step-card h4 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
 .step-card p { font-size: 12px; color: var(--text-secondary); line-height: 1.6; }
 
-/* ===== 联系卡片 ===== */
+/* 联系卡片 */
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -817,7 +817,7 @@ a:hover { text-decoration: underline; }
   border-radius: var(--radius);
 }
 
-/* ===== 页脚 ===== */
+/* 页脚 */
 .footer-new {
   background: #2a2a2a;
   color: #999;
@@ -872,7 +872,7 @@ a:hover { text-decoration: underline; }
   text-align: center;
 }
 
-/* ===== 近日动态卡片 ===== */
+/* 近日动态卡片 */
 .news-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -966,7 +966,7 @@ a:hover { text-decoration: underline; }
 @media (max-width: 640px) {
   .news-grid { grid-template-columns: 1fr; }
 }
-/* ===== 资料卡片（资料汇总/首页通用）===== */
+/* material cards */
 .material-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1084,7 +1084,7 @@ a:hover { text-decoration: underline; }
 @media (max-width: 640px) {
   .material-grid { grid-template-columns: 1fr; }
 }
-/* ===== 工具类 ===== */
+/* 工具类 */
 .text-center { text-align: center; }
 .mt-0 { margin-top: 0 !important; }
 .mt-20 { margin-top: 20px; }
@@ -1205,7 +1205,7 @@ a:hover { text-decoration: underline; }
   color: #be185d;
 }
 .grid-full { grid-column: 1 / -1; }
-/* ===== 响应式 ===== */
+/* 响应式 */
 @media (max-width: 900px) {
   .resource-grid, .tool-grid, .contact-grid, .package-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1254,7 +1254,7 @@ a:hover { text-decoration: underline; }
 }
 
 
-/* ===== 资料汇总页（search.html）专属样式 ===== */
+/* search page */
 .material-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
