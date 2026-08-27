@@ -3,26 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nebula EduHub是个人搭建的学习资料归档索引平台，整理分享中小学各科试卷、电子课本、教辅资料。">
     <title>关于本站-Nebula EduHub</title>
     <link rel="icon" type="image/png" href="favicon-light-32.png?v=3" data-favicon>
     <link rel="icon" href="favicon.ico?v=5" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico?v=5" type="image/x-icon">
     <link rel="apple-touch-icon" href="apple-touch-icon-light.png?v=3">
-<script>
-(function(){
-  function setFavicon(dark){
-    var s=dark?'dark':'light';
-    document.querySelectorAll('link[data-favicon]').forEach(function(l){
-      l.href='favicon-'+s+'-32.png?v=3';
-    });
-    var ati=document.querySelector('link[rel="apple-touch-icon"]');
-    if(ati) ati.href='apple-touch-icon-'+s+'.png?v=3';
-  }
-  var mq=window.matchMedia('(prefers-color-scheme: dark)');
-  setFavicon(mq.matches);
-  mq.addEventListener('change',function(e){setFavicon(e.matches);});
-})();
-</script>    <link rel="stylesheet" href="css/style.css">
+<script src="js/favicon.js"></script>    <link rel="stylesheet" href="css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -56,7 +43,7 @@
 </section>
 
 <!-- 关于内容 -->
-<section class="section" class="mt-0">
+<section class="section mt-0">
     <div class="container">
         <div class="about-content">
             <h3>本站简介</h3>
@@ -75,7 +62,7 @@
         </div>
 
         <!-- 联系方式 -->
-        <div id="contact" class="section-header" class="mt-50">
+        <div id="contact" class="section-header mt-50">
             <span class="section-tag"><i class="fa-solid fa-comments text-green"></i> 联系我们</span>
             <h2 class="section-title">立即咨询购买</h2>
             <p class="section-desc">添加微信/QQ，获取最新优惠和免费资料，有问必答</p>
@@ -83,19 +70,19 @@
 
         <div class="contact-grid">
             <div class="contact-card">
-                <div class="contact-icon" class="icon-bg-green"><i class="fa-solid fa-comments text-green"></i></div>
+                <div class="contact-icon icon-bg-green"><i class="fa-solid fa-comments text-green"></i></div>
                 <div class="label">微信咨询</div>
                 <img src="images/wechat.png" alt="微信二维码" class="qr-img">
                 <div class="hint">扫码添加微信，备注"资料站"</div>
             </div>
             <div class="contact-card">
-                <div class="contact-icon" class="icon-bg-blue"><i class="fa-solid fa-comment-dots text-blue"></i></div>
+                <div class="contact-icon icon-bg-blue"><i class="fa-solid fa-comment-dots text-blue"></i></div>
                 <div class="label">QQ咨询</div>
                 <img src="images/qq.png" alt="QQ二维码" class="qr-img">
                 <div class="hint">扫码添加QQ，工作时间 9:00 - 22:00</div>
             </div>
             <div class="contact-card">
-                <div class="contact-icon" class="icon-bg-pink"><i class="fa-solid fa-book text-red"></i></div>
+                <div class="contact-icon icon-bg-pink"><i class="fa-solid fa-book text-red"></i></div>
                 <div class="label">小红书</div>
                 <img src="images/xiaohongshu.png" alt="小红书二维码" class="qr-img">
                 <div class="hint">扫码关注小红书，获取最新资料动态</div>
@@ -107,7 +94,7 @@
         </div>
 
         <!-- 免责声明 -->
-        <div class="about-content" class="mt-40">
+        <div class="about-content mt-40">
             <h3>免责声明</h3>
             <p>1. 本站所有资料索引均来源于网络，版权归原作者及本人（部分）所有。本站仅做索引整理，不直接存放、分发原版文件。</p>
             <p>2. 网校通、下载工具业务，均为官方正规渠道或合法脚本，安全稳定，售后有保障。</p>

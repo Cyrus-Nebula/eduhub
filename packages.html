@@ -3,26 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="学科网网校通账号开通，全科/单科套餐可选，绑定自己手机号，海量资源免费下载。">
     <title>网校通服务-Nebula EduHub</title>
     <link rel="icon" type="image/png" href="favicon-light-32.png?v=3" data-favicon>
     <link rel="icon" href="favicon.ico?v=5" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico?v=5" type="image/x-icon">
     <link rel="apple-touch-icon" href="apple-touch-icon-light.png?v=3">
-<script>
-(function(){
-  function setFavicon(dark){
-    var s=dark?'dark':'light';
-    document.querySelectorAll('link[data-favicon]').forEach(function(l){
-      l.href='favicon-'+s+'-32.png?v=3';
-    });
-    var ati=document.querySelector('link[rel="apple-touch-icon"]');
-    if(ati) ati.href='apple-touch-icon-'+s+'.png?v=3';
-  }
-  var mq=window.matchMedia('(prefers-color-scheme: dark)');
-  setFavicon(mq.matches);
-  mq.addEventListener('change',function(e){setFavicon(e.matches);});
-})();
-</script>    <link rel="stylesheet" href="css/style.css">
+<script src="js/favicon.js"></script>    <link rel="stylesheet" href="css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -56,7 +43,7 @@
 </section>
 
 <!-- 套餐卡片 -->
-<section class="section" class="mt-0">
+<section class="section mt-0">
     <div class="container">
         <div class="package-grid">
             <!-- 标准版 -->
@@ -115,7 +102,7 @@
         <div class="pricing-wrap">
             <h3>单科套餐价格表</h3>
             <p class="sub">只需要单一学科的同学可以选单科套餐，更划算</p>
-            <div class="package-grid" class="mt-20">
+            <div class="package-grid mt-20">
                 <div class="package-card">
                     <h4 >40份/天</h4>
                     <div class="price" >¥160<small>/年</small></div>

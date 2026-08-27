@@ -124,20 +124,17 @@ function fallbackCopy(text, callback) {
 }
 
 // 复制微信号
-function copyWechat() {
-    const btn = event.target;
+function copyWechat(btn) {
     copyText('17795600558', btn);
 }
 
 // 复制QQ号
-function copyQQ() {
-    const btn = event.target;
+function copyQQ(btn) {
     copyText('3616927242', btn);
 }
 
 // 复制小红书号
-function copyXhs() {
-    const btn = event.target;
+function copyXhs(btn) {
     copyText('Nebula_official', btn);
 }
 
