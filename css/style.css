@@ -848,6 +848,7 @@ a:hover { text-decoration: underline; }
   border-radius: var(--radius-xs);
   object-fit: cover;
   display: block;
+  filter: brightness(0) invert(1);
 }
 .footer-brand span span { color: #6b9bd1; }
 .footer-desc { font-size: 13px; line-height: 1.7; color: #999; margin: 0; }
