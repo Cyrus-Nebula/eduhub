@@ -147,7 +147,7 @@ a:hover { text-decoration: underline; }
   margin: 0 auto;
 }
 
-/* hero */
+/* 首屏 */
 .hero {
   position: relative;
   min-height: calc(100vh - var(--nav-height));
@@ -966,7 +966,7 @@ a:hover { text-decoration: underline; }
 @media (max-width: 640px) {
   .news-grid { grid-template-columns: 1fr; }
 }
-/* material cards */
+/* 资料卡片 */
 .material-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1254,7 +1254,7 @@ a:hover { text-decoration: underline; }
 }
 
 
-/* search page */
+/* 资料汇总页 */
 .material-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
