@@ -205,10 +205,10 @@
     <div class="search-hero">
         <div class="search-input-wrap">
             <input type="text" id="materialSearch" placeholder="搜索资料名称，比如「二次函数」「全品」「八下」…" onkeydown="if(event.key==='Enter')doFilter()">
-            <button type="button" onclick="doFilter()" style="padding:10px 24px;border:none;border-radius:8px;background:#2563eb;color:white;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap;">搜索</button>
+            <button type="button" onclick="doFilter()" class="search-btn">搜索</button>
         </div>
-        <div class="filter-bar" style="display:flex;gap:12px;margin-top:16px;flex-wrap:wrap;justify-content:center;">
-            <select id="filterSubject" style="padding:10px 14px;border:1px solid #d1d5db;border-radius:8px;font-size:14px;background:white;cursor:pointer;min-width:120px;">
+        <div class="filter-bar" >
+            <select id="filterSubject" >
                 <option value="">全部学科</option>
                 <option value="语文">语文</option>
                 <option value="数学">数学</option>
@@ -221,7 +221,7 @@
                 <option value="道德与法治">道德与法治</option>
                 <option value="高中数学">高中数学</option>
             </select>
-            <select id="filterVersion" style="padding:10px 14px;border:1px solid #d1d5db;border-radius:8px;font-size:14px;background:white;cursor:pointer;min-width:120px;">
+            <select id="filterVersion" >
                 <option value="">教材版本</option>
                 <option value="统编版">统编版</option>
                 <option value="人教版">人教版</option>
@@ -246,7 +246,7 @@
                 <option value="北京版">北京版</option>
                 <option value="济南版">济南版</option>
             </select>
-            <select id="filterGrade" style="padding:10px 14px;border:1px solid #d1d5db;border-radius:8px;font-size:14px;background:white;cursor:pointer;min-width:120px;">
+            <select id="filterGrade" >
                 <option value="">全部年级</option>
                 <option value="七年级">七年级</option>
                 <option value="八年级">八年级</option>
@@ -254,29 +254,29 @@
                 <option value="中考">中考</option>
                 <option value="高中">高中</option>
             </select>
-            <select id="filterVolume" style="padding:10px 14px;border:1px solid #d1d5db;border-radius:8px;font-size:14px;background:white;cursor:pointer;min-width:120px;">
+            <select id="filterVolume" >
                 <option value="">全部册次</option>
                 <option value="上册">上册</option>
                 <option value="下册">下册</option>
                 <option value="全一册">全一册</option>
             </select>
-            <select id="filterType" style="padding:10px 14px;border:1px solid #d1d5db;border-radius:8px;font-size:14px;background:white;cursor:pointer;min-width:120px;">
+            <select id="filterType" >
                 <option value="">全部种类</option>
                 <option value="电子教材">电子教材</option>
                 <option value="全品作业本">全品作业本</option>
                 <option value="试卷">试卷</option>
                 <option value="专题训练">专题训练</option>
             </select>
-            <button onclick="doFilter()" style="padding:10px 18px;border:1px solid #2563eb;border-radius:8px;font-size:14px;background:#2563eb;cursor:pointer;color:white;font-weight:600;">确认</button>
-            <button onclick="resetFilter()" style="padding:10px 18px;border:1px solid #d1d5db;border-radius:8px;font-size:14px;background:#f9fafb;cursor:pointer;color:#6b7280;">重置</button>
+            <button onclick="doFilter()" class="filter-btn">确认</button>
+            <button onclick="resetFilter()" class="filter-btn-reset">重置</button>
         </div>
-        <div id="filterResult" style="text-align:center;margin-top:12px;font-size:13px;color:#9ca3af;"></div>
+        <div id="filterResult" class="filter-result"></div>
     </div>
 </div>
 
 <!-- 电子教材列表已整合到下方资料列表中 -->
 
-<section class="section" style="padding-top:10px;">
+<section class="section" class="mt-0">
     <div class="container">
 
         <!-- 最新资料 -->
@@ -292,8 +292,8 @@
         </div>
 
         <!-- 全部资料展开按钮 -->
-        <div id="toggleAllWrap" style="text-align:center;margin:30px 0;">
-            <button id="toggleAllBtn" onclick="toggleAll()" style="padding:12px 32px;border:none;border-radius:8px;background:#2563eb;color:white;font-size:15px;font-weight:600;cursor:pointer;transition:all 0.2s;">显示所有资料</button>
+        <div id="toggleAllWrap" class="text-center mt-30">
+            <button id="toggleAllBtn" onclick="toggleAll()" class="toggle-all-btn">显示所有资料</button>
         </div>
         <!-- 筛选/搜索结果 & 展开全部资料 -->
         <div id="materialsContainer"></div>
@@ -339,7 +339,7 @@
                 <h4 class="footer-title">联系我们</h4>
                 <ul class="footer-list">
                     <li><i class="fa-solid fa-envelope footer-icon"></i>邮箱：<a href="mailto:3616927242@qq.com">3616927242@qq.com</a></li>
-                    <li><span style="visibility:hidden;">邮箱：</span>nebula_eduhub@163.com</li>
+                    <li><span class="footer-spacer">邮箱：</span>nebula_eduhub@163.com</li>
                     <li><i class="fa-solid fa-location-dot footer-icon"></i>西安搞机ZP集团</li>
                     
                 </ul>
@@ -653,7 +653,7 @@ function loadXhs(filter = "") {
         </div>`;
     });
     if (!html && kw) {
-        html = `<div style="grid-column:1/-1;text-align:center;padding:20px;color:var(--text-muted);">没有找到匹配的笔记</div>`;
+        html = `<div class="grid-full text-center muted">没有找到匹配的笔记</div>`;
     }
     box.innerHTML = html;
 }
@@ -708,7 +708,7 @@ function loadList(filter = "") {
         html += '<div class="material-grid">';
         list.forEach(m => {
             let isXhs = m.name === "2026年陕西省中考数学试题";
-            let xhsBtn = isXhs ? '<a href="https://xhslink.cn/o/3DAHQDqtNqr" target="_blank" class="material-btn btn-preview" style="background:#fce7f3;color:#be185d;">小红书</a>' : '';
+            let xhsBtn = isXhs ? '<a href="https://xhslink.cn/o/3DAHQDqtNqr" target="_blank" class="material-btn btn-preview" class="xhs-inline-btn">小红书</a>' : '';
             
             let previewBtn = '';
             let downloadBtn = '';
@@ -752,7 +752,7 @@ function loadList(filter = "") {
         });
         html += '</div>';
     } else {
-        html = '<div style="text-align:center;padding:60px 20px;color:#9ca3af;"><div style="font-size:48px;margin-bottom:16px;"><i class="fa-solid fa-magnifying-glass"></i></div><div style="font-size:16px;">没有找到匹配的资料</div><div style="font-size:13px;margin-top:8px;">试试调整筛选条件或搜索关键词</div></div>';
+        html = '<div class="empty-state"><div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div><div class="title">没有找到匹配的资料</div><div class="hint">试试调整筛选条件或搜索关键词</div></div>';
     }
     
     box.innerHTML = html;
@@ -768,7 +768,7 @@ function loadNewest() {
     let html = '<div class="material-grid">';
     list.forEach(m => {
         let isXhs = m.name === "2026年陕西省中考数学试题";
-        let xhsBtn = isXhs ? '<a href="https://xhslink.cn/o/3DAHQDqtNqr" target="_blank" class="material-btn btn-preview" style="background:#fce7f3;color:#be185d;">小红书</a>' : '';
+        let xhsBtn = isXhs ? '<a href="https://xhslink.cn/o/3DAHQDqtNqr" target="_blank" class="material-btn btn-preview" class="xhs-inline-btn">小红书</a>' : '';
         let previewBtn = '';
         let downloadBtn = '';
         let tag = '';

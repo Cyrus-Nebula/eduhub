@@ -409,6 +409,8 @@ a:hover { text-decoration: underline; }
   gap: 12px;
   flex-wrap: wrap;
   align-items: flex-end;
+  justify-content: center;
+  margin-top: 16px;
 }
 .filter-bar .field { display: flex; flex-direction: column; gap: 4px; }
 .filter-bar label { font-size: 12px; color: var(--text-muted); font-weight: 500; }
@@ -584,9 +586,9 @@ a:hover { text-decoration: underline; }
   padding: 3px 12px;
   border-radius: var(--radius-xs);
 }
-.package-card h4 { font-size: 17px; font-weight: 600; margin-bottom: 6px; }
+.package-card h4 { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
 .package-card .desc { font-size: 13px; color: var(--text-muted); margin-bottom: 18px; }
-.package-card .price { font-size: 30px; font-weight: 600; color: var(--primary); margin-bottom: 4px; }
+.package-card .price { font-size: 28px; font-weight: 600; color: var(--primary); margin-bottom: 4px; }
 .package-card .price small { font-size: 14px; font-weight: 500; color: var(--text-muted); }
 .package-card .unit { font-size: 12px; color: var(--text-muted); margin-bottom: 20px; }
 .package-card ul { list-style: none; text-align: left; margin-bottom: 24px; }
@@ -871,6 +873,124 @@ a:hover { text-decoration: underline; }
   text-align: center;
 }
 
+/* ===== 工具类 ===== */
+.text-center { text-align: center; }
+.mt-0 { margin-top: 0 !important; }
+.mt-20 { margin-top: 20px; }
+.mt-30 { margin-top: 30px; }
+.mt-40 { margin-top: 40px; }
+.mt-50 { margin-top: 50px; }
+.muted { color: var(--text-muted); }
+.offline { opacity: 0.6; position: relative; }
+.offline-badge {
+  position: absolute;
+  top: 12px; right: 12px;
+  background: #c0392b;
+  color: white;
+  padding: 4px 10px;
+  border-radius: var(--radius-xs);
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 1;
+}
+.tool-card.offline .tool-features li { color: var(--text-muted); }
+.tool-card.offline .tool-price {
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+.btn-offline {
+  background: var(--bg-alt);
+  color: var(--text-muted);
+  padding: 8px 16px;
+  border-radius: var(--radius-xs);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: not-allowed;
+  display: inline-block;
+}
+.icon-bg-blue   { background: #e8f0fe !important; }
+.icon-bg-green  { background: #e6f4ea !important; }
+.icon-bg-yellow { background: #fef7e0 !important; }
+.icon-bg-pink   { background: #fce7f3 !important; }
+.icon-bg-indigo { background: #e0e7ff !important; }
+.icon-bg-red    { background: #fee2e2 !important; }
+.search-btn {
+  padding: 8px 24px;
+  border: none;
+  border-radius: var(--radius-xs);
+  background: var(--primary);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: inherit;
+}
+.filter-btn {
+  padding: 8px 18px;
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-xs);
+  font-size: 14px;
+  background: var(--primary);
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  font-family: inherit;
+}
+.filter-btn-reset {
+  padding: 8px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xs);
+  font-size: 14px;
+  background: var(--bg-alt);
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-family: inherit;
+}
+.footer-spacer { visibility: hidden; }
+.qr-img {
+  width: 160px;
+  height: 160px;
+  margin: 12px auto;
+  border-radius: var(--radius);
+  display: block;
+}
+.text-small-muted {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.toggle-all-btn {
+  padding: 10px 32px;
+  border: none;
+  border-radius: var(--radius-xs);
+  background: var(--primary);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .15s;
+  font-family: inherit;
+}
+.toggle-all-btn:hover { background: var(--primary-dark); }
+.filter-result {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-muted);
+}
+.empty-state .icon { font-size: 48px; margin-bottom: 16px; }
+.empty-state .title { font-size: 16px; }
+.empty-state .hint { font-size: 13px; margin-top: 8px; }
+.xhs-inline-btn {
+  background: #fce7f3;
+  color: #be185d;
+}
+.grid-full { grid-column: 1 / -1; }
 /* ===== 响应式 ===== */
 @media (max-width: 900px) {
   .resource-grid, .tool-grid, .contact-grid, .package-grid {
