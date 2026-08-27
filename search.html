@@ -817,10 +817,10 @@ function toggleAll() {
     let btn = document.getElementById("toggleAllBtn");
     if (showAll) {
         btn.textContent = "收起所有资料";
-        btn.style.background = "#6b7280";
+        btn.classList.add("expanded");
     } else {
         btn.textContent = "显示所有资料";
-        btn.style.background = "#2563eb";
+        btn.classList.remove("expanded");
     }
     loadList();
     if (showAll) document.getElementById("materialsContainer").scrollIntoView({ behavior: 'smooth', block: 'start' });

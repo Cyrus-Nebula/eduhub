@@ -12,7 +12,7 @@ function toggleMenu() {
 function filterResources(btn, cat) {
     document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
     if (btn) btn.classList.add('active');
-    document.querySelectorAll('.resource-card').forEach(card => {
+    document.querySelectorAll('.material-card').forEach(card => {
         const cats = card.getAttribute('data-cat') || '';
         if (cat === 'all' || cats.includes(cat)) {
             card.style.display = 'flex';
