@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>下载工具 - Nebula EduHub</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=1">
-    <link rel="icon" href="favicon.ico?v=3" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico?v=3" type="image/x-icon">
-    <link rel="icon" type="image/png" href="images/logo.png?v=3">
-    <link rel="apple-touch-icon" href="images/logo.png?v=3">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="favicon-light-32.png?v=2" data-favicon>
+    <link rel="icon" href="favicon.ico?v=4" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico?v=4" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon-light.png?v=2">
+<script>
+(function(){
+  function setFavicon(dark){
+    var s=dark?'dark':'light';
+    document.querySelectorAll('link[data-favicon]').forEach(function(l){
+      l.href='favicon-'+s+'-32.png?v=2';
+    });
+    var ati=document.querySelector('link[rel="apple-touch-icon"]');
+    if(ati) ati.href='apple-touch-icon-'+s+'.png?v=2';
+  }
+  var mq=window.matchMedia('(prefers-color-scheme: dark)');
+  setFavicon(mq.matches);
+  mq.addEventListener('change',function(e){setFavicon(e.matches);});
+})();
+</script>    <link rel="stylesheet" href="css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
 </head>
 <body>
