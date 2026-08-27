@@ -438,7 +438,6 @@ const materials = [
     { name: "数学八年级上册（北师大版·新版）", file: "数学八年级上册 北师大版.pdf", subject: "数学", grade: "八年级", volume: "上册", type: "电子教材", size: "11MB", icon: "", edition: "新版" },
     { name: "数学八年级下册（北师大版·新版）", file: "数学八年级下册  北师大版.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "电子教材", size: "22MB", icon: "", edition: "新版" },
     { name: "数学九年级上册（北师大版·新版）", file: "数学九年级上册 北师大版.pdf", subject: "数学", grade: "九年级", volume: "上册", type: "电子教材", size: "23MB", icon: "", edition: "新版" },
-    { name: "数学九年级下册（北师大版·新版）", file: "数学九年级下册 北师大版.pdf", subject: "数学", grade: "九年级", volume: "下册", type: "电子教材", size: "16MB", icon: "", edition: "新版" },
 
     { name: "英语八年级上册（人教版·旧版）", file: "英语八年级上册 人教版.pdf", subject: "英语", grade: "八年级", volume: "上册", type: "电子教材", size: "5.0MB", icon: "", edition: "旧版" },
     { name: "英语八年级下册（人教版·旧版）", file: "英语八年级下册 人教版.pdf", subject: "英语", grade: "八年级", volume: "下册", type: "电子教材", size: "6.6MB", icon: "", edition: "旧版" },
@@ -809,7 +808,7 @@ function loadNewest() {
         }
         html += `
         <div class="material-card">
-            <div class="material-icon">${m.icon}</div>
+            <div class="material-icon" style="background-image:url('${getCoverForSubject(m.subject)}');"></div>
             <div class="material-info">
                 <div class="material-name">${m.name}${tag}</div>
                 <div class="material-meta">${m.subject} · ${m.grade} · ${m.volume} · ${m.type}${m.size ? ' · ' + m.size : ''}${isXhs ? ' · 小红书同步更新' : ''}</div>
