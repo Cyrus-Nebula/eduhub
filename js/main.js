@@ -38,12 +38,6 @@ function copyQQ(btn) { copyText('3616927242', btn); }
 function copyXhs(btn) { copyText('Nebula_official', btn); }
 
 document.addEventListener('DOMContentLoaded', function () {
-    // URL带kw参数时自动搜索
-    var kw = new URLSearchParams(window.location.search).get('kw');
-    if (kw && document.getElementById('searchInput')) {
-        document.getElementById('searchInput').value = kw;
-        doSearch();
-    }
     // 点导航后收起移动端菜单
     document.querySelectorAll('.nav-links a').forEach(function (a) {
         a.addEventListener('click', function () {

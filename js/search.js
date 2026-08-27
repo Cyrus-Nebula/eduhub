@@ -353,7 +353,7 @@ function loadList(filter = "") {
         html += '<div class="material-grid">';
         list.forEach(m => {
             let isXhs = m.name === "2026年陕西省中考数学试题";
-            let xhsBtn = isXhs ? '<a href="https://xhslink.cn/o/3DAHQDqtNqr" target="_blank" class="material-btn btn-preview" class="xhs-inline-btn">小红书</a>' : '';
+            let xhsBtn = isXhs ? '<a href="https://xhslink.cn/o/3DAHQDqtNqr" target="_blank" class="material-btn btn-preview xhs-inline-btn">小红书</a>' : '';
             
             let previewBtn = '';
             let downloadBtn = '';
@@ -413,7 +413,7 @@ function loadNewest() {
     let html = '<div class="material-grid">';
     list.forEach(m => {
         let isXhs = m.name === "2026年陕西省中考数学试题";
-        let xhsBtn = isXhs ? '<a href="https://xhslink.cn/o/3DAHQDqtNqr" target="_blank" class="material-btn btn-preview" class="xhs-inline-btn">小红书</a>' : '';
+        let xhsBtn = isXhs ? '<a href="https://xhslink.cn/o/3DAHQDqtNqr" target="_blank" class="material-btn btn-preview xhs-inline-btn">小红书</a>' : '';
         let previewBtn = '';
         let downloadBtn = '';
         let tag = '';
@@ -481,7 +481,6 @@ function resetFilter() {
     doFilter();
 }
 
-// 目录名和代码里写的不一致，实际叫八下试卷/七上试卷
 function pathOf(m) {
     if (m.type === "电子教材") {
         if (m.grade === "高中") return `materials/高中数学/${m.file}`;
