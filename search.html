@@ -185,7 +185,7 @@
 <script src="js/search.js"></script>
 
 <script>
-const materials = [
+var materials = [
 
     { name: "历史七年级上册（统编版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673718&sign=e83f93&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "历史", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "统编版", tagColor: "red" },
     { name: "道德与法治七年级上册（统编版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673713&sign=eec310&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "道德与法治", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "统编版", tagColor: "red" },
@@ -319,7 +319,7 @@ const materials = [
     { name: "数学九年级下册（北师大版·新版）", downloadUrl: "https://github.com/Cyrus-Nebula/nebula-eduhub/releases/download/materials/2024.pdf", previewFile: "数学九年级下册（北师大版·2024新版）_预览版.pdf", subject: "数学", grade: "九年级", volume: "下册", type: "电子教材", size: "47MB", icon: "", edition: "新版", version: "北师大版", tagColor: "green" },
 ];
 
-const xhsNotes = [
+var xhsNotes = [
     {
         "index": 1,
         "title": "Unit 8 More than a Game（语法讲解）",
@@ -442,15 +442,15 @@ const xhsNotes = [
 ];
 
 function loadXhs(filter = "") {
-    let box = document.getElementById("xhsContainer");
-    let kw = filter.toLowerCase().trim();
-    let html = "";
-    let list = xhsNotes.filter(n => 
-        !kw || n.title.toLowerCase().includes(kw) || n.desc.toLowerCase().includes(kw)
-    );
-    list.forEach(n => {
-        let desc = n.desc ? n.desc.substring(0, 60) + (n.desc.length > 60 ? "..." : "") : "点击查看小红书笔记详情";
-        let cover = detectXhsCover(n.title);
+    var box = document.getElementById("xhsContainer");
+    var kw = filter.toLowerCase().trim();
+    var html = "";
+    var list = xhsNotes.filter(function(n) {
+        return !kw || n.title.toLowerCase().includes(kw) || n.desc.toLowerCase().includes(kw);
+    });
+    list.forEach(function(n) {
+        var desc = n.desc ? n.desc.substring(0, 60) + (n.desc.length > 60 ? "..." : "") : "点击查看小红书笔记详情";
+        var cover = detectXhsCover(n.title);
         html += `
         <div class="material-card">
             <div class="material-icon" style="background-image:url('${cover}');"></div>
@@ -471,34 +471,34 @@ function loadXhs(filter = "") {
 }
 
 function loadNewest() {
-    let box = document.getElementById("latestContainer");
+    var box = document.getElementById("latestContainer");
     if (!box) return;
-    let newest = materials[materials.length - 1];
-    let pool = materials.slice(-20, -1);
-    pool.sort(() => Math.random() - 0.5);
-    let list = [newest].concat(pool.slice(0, 7));
-    let html = '<div class="material-grid">';
-    list.forEach(m => {
-        let isXhs = m.name === "2026年陕西省中考数学试题";
-        let xhsBtn = isXhs ? '<a href="https://xhslink.cn/o/3DAHQDqtNqr" target="_blank" class="material-btn btn-preview xhs-inline-btn">小红书</a>' : '';
-        let previewBtn = '';
-        let downloadBtn = '';
-        let tag = '';
+    var newest = materials[materials.length - 1];
+    var pool = materials.slice(-20, -1);
+    pool.sort(function() { return Math.random() - 0.5; });
+    var list = [newest].concat(pool.slice(0, 7));
+    var html = '<div class="material-grid">';
+    list.forEach(function(m) {
+        var isXhs = m.name === "2026年陕西省中考数学试题";
+        var xhsBtn = isXhs ? '<a href="https://xhslink.cn/o/3DAHQDqtNqr" target="_blank" class="material-btn btn-preview xhs-inline-btn">小红书</a>' : '';
+        var previewBtn = '';
+        var downloadBtn = '';
+        var tag = '';
         if (m.downloadUrl) {
             downloadBtn = `<a href="${m.downloadUrl}" target="_blank" class="material-btn btn-download">下载</a>`;
             if (m.previewFile) {
-                let pp = pathOf({ ...m, file: m.previewFile });
-                let ep = encodeURIComponent(pp).replace(/%2F/g, '/');
+                var pp = pathOf({ ...m, file: m.previewFile });
+                var ep = encodeURIComponent(pp).replace(/%2F/g, '/');
                 previewBtn = `<a href="${ep}" target="_blank" class="material-btn btn-preview">预览</a>`;
             }
             if (m.tagColor === 'red') tag = '<img src="images/textbook_tag_red.png" class="textbook-tag" alt="">';
             else if (m.tagColor === 'green') tag = '<img src="images/textbook_tag_green.png" class="textbook-tag" alt="">';
         } else {
-            let p = pathOf(m);
-            let enc = encodeURIComponent(p).replace(/%2F/g, '/');
+            var p = pathOf(m);
+            var enc = encodeURIComponent(p).replace(/%2F/g, '/');
             if (m.previewFile) {
-                let pp = pathOf({ ...m, file: m.previewFile });
-                let ep = encodeURIComponent(pp).replace(/%2F/g, '/');
+                var pp = pathOf({ ...m, file: m.previewFile });
+                var ep = encodeURIComponent(pp).replace(/%2F/g, '/');
                 previewBtn = `<a href="${ep}" target="_blank" class="material-btn btn-preview">预览</a>`;
             } else {
                 previewBtn = `<a href="${enc}" target="_blank" class="material-btn btn-preview">预览</a>`;
@@ -523,11 +523,11 @@ function loadNewest() {
     box.innerHTML = html;
 }
 
-let showAll = false;
+var showAll = false;
 
 function toggleAll() {
     showAll = !showAll;
-    let btn = document.getElementById("toggleAllBtn");
+    var btn = document.getElementById("toggleAllBtn");
     if (showAll) {
         btn.textContent = "收起所有资料";
         btn.classList.add("expanded");
