@@ -1,4 +1,10 @@
 // 资料页核心逻辑
+function escapeHtml(str) {
+    if (!str) return '';
+    var div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+}
 function getCoverForSubject(subject) {
     if (!subject) return 'images/cover_general.jpg';
     if (subject.includes('语文')) return 'images/cover_chinese.jpg';
@@ -69,18 +75,18 @@ function loadList(filter = "") {
         html += '<div class="material-grid">';
         list.forEach(function(m) {
             var isXhs = m.name === "2026年陕西省中考数学试题";
-            var xhsBtn = isXhs ? '<a href="https://xhslink.cn/o/3DAHQDqtNqr" target="_blank" class="material-btn btn-preview xhs-inline-btn">小红书</a>' : '';
+            var xhsBtn = isXhs ? '<a href="https://xhslink.cn/o/3DAHQDqtNqr" target="_blank" rel="noopener noreferrer" class="material-btn btn-preview xhs-inline-btn">小红书</a>' : '';
             
             var previewBtn = '';
             var downloadBtn = '';
             var tag = '';
             
             if (m.downloadUrl) {
-                downloadBtn = `<a href="${m.downloadUrl}" target="_blank" class="material-btn btn-download">下载</a>`;
+                downloadBtn = `<a href="${m.downloadUrl}" target="_blank" rel="noopener noreferrer" class="material-btn btn-download">下载</a>`;
                 if (m.previewFile) {
                     var pp = pathOf({ ...m, file: m.previewFile });
                     var ep = encodeURIComponent(pp).replace(/%2F/g, '/');
-                    previewBtn = `<a href="${ep}" target="_blank" class="material-btn btn-preview">预览</a>`;
+                    previewBtn = `<a href="${ep}" target="_blank" rel="noopener noreferrer" class="material-btn btn-preview">预览</a>`;
                 }
                 if (m.tagColor === 'red') tag = '<img src="images/textbook_tag_red.png" class="textbook-tag" alt="">';
                 else if (m.tagColor === 'green') tag = '<img src="images/textbook_tag_green.png" class="textbook-tag" alt="">';
@@ -90,9 +96,9 @@ function loadList(filter = "") {
                 if (m.previewFile) {
                     var pp = pathOf({ ...m, file: m.previewFile });
                     var ep = encodeURIComponent(pp).replace(/%2F/g, '/');
-                    previewBtn = `<a href="${ep}" target="_blank" class="material-btn btn-preview">预览</a>`;
+                    previewBtn = `<a href="${ep}" target="_blank" rel="noopener noreferrer" class="material-btn btn-preview">预览</a>`;
                 } else {
-                    previewBtn = `<a href="${enc}" target="_blank" class="material-btn btn-preview">预览</a>`;
+                    previewBtn = `<a href="${enc}" target="_blank" rel="noopener noreferrer" class="material-btn btn-preview">预览</a>`;
                 }
                 downloadBtn = `<a href="${enc}" download class="material-btn btn-download">下载</a>`;
             }
@@ -101,8 +107,8 @@ function loadList(filter = "") {
             <div class="material-card">
                 <div class="material-icon" style="background-image:url('${getCoverForSubject(m.subject)}');"></div>
                 <div class="material-info">
-                    <div class="material-name">${m.name}${tag}</div>
-                    <div class="material-meta">${m.subject} · ${m.grade} · ${m.volume} · ${m.type}${m.size ? ' · ' + m.size : ''}${isXhs ? ' · 小红书同步更新' : ''}</div>
+                    <div class="material-name">${escapeHtml(m.name)}${tag}</div>
+                    <div class="material-meta">${escapeHtml(m.subject)} · ${escapeHtml(m.grade)} · ${escapeHtml(m.volume)} · ${escapeHtml(m.type)}${m.size ? ' · ' + escapeHtml(m.size) : ''}${isXhs ? ' · 小红书同步更新' : ''}</div>
                 </div>
                 <div class="material-actions">
                     ${xhsBtn}

@@ -167,7 +167,7 @@
             <div class="footer-col">
                 <h4 class="footer-title">联系我们</h4>
                 <ul class="footer-list">
-                    <li><a href="https://xhslink.cn/m/9GySSeTyLFQ" target="_blank">小红书主页</a></li>
+                    <li><a href="https://xhslink.cn/m/9GySSeTyLFQ" target="_blank" rel="noopener noreferrer">小红书主页</a></li>
                     <li><i class="fa-solid fa-envelope footer-icon"></i>邮箱：</li>
                     <li><a href="mailto:3616927242@qq.com">3616927242@qq.com</a></li>
                     <li>nebula_eduhub@163.com</li>
@@ -182,264 +182,12 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="data/materials.js"></script>
+<script src="data/xhs.js"></script>
 <script src="js/search.js"></script>
 
 <script>
-var materials = [
 
-    { name: "历史七年级上册（统编版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673718&sign=e83f93&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "历史", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "统编版", tagColor: "red" },
-    { name: "道德与法治七年级上册（统编版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673713&sign=eec310&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "道德与法治", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "统编版", tagColor: "red" },
-    { name: "地理七年级上册（中图版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673711&sign=1fff3e&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "地理", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "中图版", tagColor: "green" },
-    { name: "地理七年级上册（粤教粤人版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673707&sign=69f9bd&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "地理", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "粤教粤人版", tagColor: "green" },
-    { name: "地理七年级上册（湘教版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673691&sign=eea7e4&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "地理", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "湘教版", tagColor: "green" },
-    { name: "地理七年级上册（商务星球版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673645&sign=a89e68&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "地理", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "商务星球版", tagColor: "green" },
-    { name: "地理七年级上册（人教版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673638&sign=f76e53&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "地理", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "人教版", tagColor: "green" },
-    { name: "地理七年级上册（科普版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673634&sign=8be02c&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "地理", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "科普版", tagColor: "green" },
-    { name: "地理七年级上册（晋教版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673629&sign=365e27&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "地理", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "晋教版", tagColor: "green" },
-    { name: "语文七年级上册（统编版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673334&sign=8d9147&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "语文", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "统编版", tagColor: "red" },
-    { name: "英语七年级上册（译林版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673333&sign=568ce7&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "英语", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "译林版", tagColor: "green" },
-    { name: "英语七年级上册（人教版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673293&sign=a47460&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "英语", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "人教版", tagColor: "green" },
-    { name: "英语七年级上册（科普版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673292&sign=2b6ce6&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "英语", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "科普版", tagColor: "green" },
-    { name: "英语七年级上册（冀教版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673289&sign=10d01f&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "英语", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "冀教版", tagColor: "green" },
-    { name: "英语七年级上册（沪外教版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673286&sign=d19a0f&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "英语", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "沪外教版", tagColor: "green" },
-    { name: "英语七年级上册（沪教版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673284&sign=fe652d&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "英语", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "沪教版", tagColor: "green" },
-    { name: "英语七年级上册（北师大版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673283&sign=e3ced3&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "英语", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "北师大版", tagColor: "green" },
-    { name: "数学七年级上册（浙教版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673265&sign=9d587a&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "数学", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "浙教版", tagColor: "green" },
-    { name: "数学七年级上册（湘教版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673251&sign=135f3d&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "数学", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "湘教版", tagColor: "green" },
-    { name: "数学七年级上册（苏科版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673241&sign=f9e06d&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "数学", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "苏科版", tagColor: "green" },
-    { name: "数学七年级上册（人教版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673197&sign=bc3c14&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "数学", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "人教版", tagColor: "green" },
-    { name: "数学七年级上册（青岛版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673195&sign=c33d7f&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "数学", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "青岛版", tagColor: "green" },
-    { name: "数学七年级上册（冀教版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673152&sign=41adb5&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "数学", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "冀教版", tagColor: "green" },
-    { name: "数学七年级上册（华东师大版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673140&sign=fc9fbf&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "数学", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "华东师大版", tagColor: "green" },
-    { name: "数学七年级上册（沪科技版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673137&sign=bf3cb1&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "数学", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "沪科技版", tagColor: "green" },
-    { name: "数学七年级上册（北师版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673072&sign=a4ed55&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "数学", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "北师大版", tagColor: "green" },
-    { name: "数学七年级上册（北京版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673045&sign=d66f5b&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "数学", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "北京版", tagColor: "green" },
-    { name: "生物学七年级上册（苏科版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673040&sign=293d9d&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "生物学", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "苏科版", tagColor: "green" },
-    { name: "生物学七年级上册（苏教版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673028&sign=51c8ea&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "生物学", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "苏教版", tagColor: "green" },
-    { name: "生物学七年级上册（人教版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102673019&sign=3214b3&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "生物学", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "人教版", tagColor: "green" },
-    { name: "生物学七年级上册（济南版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102672987&sign=fd6100&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "生物学", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "济南版", tagColor: "green" },
-    { name: "生物学七年级上册（北京版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102672985&sign=051f32&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "生物学", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "北京版", tagColor: "green" },
-    { name: "生物学七年级上册（冀少版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102672956&sign=a60562&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "生物学", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "冀少版", tagColor: "green" },
-    { name: "生物学七年级上册（北师大版·新版）", downloadUrl: "https://mp.zhizhuma.com/qr/doc.htm?resId=102672954&sign=71845b&crId=72756955&bizId=642393&bizType=14&crIdSign=f4d3eb", subject: "生物学", grade: "七年级", volume: "上册", type: "电子教材", icon: "", edition: "新版", version: "北师大版", tagColor: "green" },
-    { name: "语文七年级下册（统编版·旧版）", file: "语文七年级下册 统编版.pdf", subject: "语文", grade: "七年级", volume: "下册", type: "电子教材", size: "7.8MB", icon: "", edition: "旧版" },
-    { name: "语文八年级上册（统编版·旧版）", file: "语文八年级上册 统编版.pdf", subject: "语文", grade: "八年级", volume: "上册", type: "电子教材", size: "7.4MB", icon: "", edition: "旧版" },
-    { name: "语文八年级下册（统编版·旧版）", file: "语文八年级下册 统编版.pdf", subject: "语文", grade: "八年级", volume: "下册", type: "电子教材", size: "5.5MB", icon: "", edition: "旧版" },
-    { name: "语文九年级上册（统编版·旧版）", file: "语文九年级上册 统编版.pdf", subject: "语文", grade: "九年级", volume: "上册", type: "电子教材", size: "5.7MB", icon: "", edition: "旧版" },
-    { name: "语文九年级下册（统编版·旧版）", file: "语文九年级下册 统编版.pdf", subject: "语文", grade: "九年级", volume: "下册", type: "电子教材", size: "8.0MB", icon: "", edition: "旧版" },
-
-    { name: "数学七年级下册（人教版·新版）", file: "数学七年级下册 人教版.pdf", subject: "数学", grade: "七年级", volume: "下册", type: "电子教材", size: "23MB", icon: "", edition: "新版" },
-    { name: "数学八年级上册（人教版·新版）", file: "数学八年级上册 人教版.pdf", subject: "数学", grade: "八年级", volume: "上册", type: "电子教材", size: "6.4MB", icon: "", edition: "新版" },
-    { name: "数学八年级下册（人教版·新版）", file: "数学八年级下册 人教版.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "电子教材", size: "15MB", icon: "", edition: "新版" },
-    { name: "数学九年级上册（人教版·旧版）", file: "数学九年级上册 人教版.pdf", subject: "数学", grade: "九年级", volume: "上册", type: "电子教材", size: "6.8MB", icon: "", edition: "旧版" },
-    { name: "数学九年级下册（人教版·旧版）", file: "数学九年级下册 人教版.pdf", subject: "数学", grade: "九年级", volume: "下册", type: "电子教材", size: "8.1MB", icon: "", edition: "旧版" },
-
-    { name: "数学七年级下册（北师大版·新版）", file: "数学七年级下册 北师大版.pdf", subject: "数学", grade: "七年级", volume: "下册", type: "电子教材", size: "22MB", icon: "", edition: "新版" },
-    { name: "数学八年级上册（北师大版·新版）", file: "数学八年级上册 北师大版.pdf", subject: "数学", grade: "八年级", volume: "上册", type: "电子教材", size: "11MB", icon: "", edition: "新版" },
-    { name: "数学八年级下册（北师大版·新版）", file: "数学八年级下册  北师大版.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "电子教材", size: "22MB", icon: "", edition: "新版" },
-    { name: "数学九年级上册（北师大版·新版）", file: "数学九年级上册 北师大版.pdf", subject: "数学", grade: "九年级", volume: "上册", type: "电子教材", size: "23MB", icon: "", edition: "新版" },
-
-    { name: "英语八年级上册（人教版·旧版）", file: "英语八年级上册 人教版.pdf", subject: "英语", grade: "八年级", volume: "上册", type: "电子教材", size: "5.0MB", icon: "", edition: "旧版" },
-    { name: "英语八年级下册（人教版·旧版）", file: "英语八年级下册 人教版.pdf", subject: "英语", grade: "八年级", volume: "下册", type: "电子教材", size: "6.6MB", icon: "", edition: "旧版" },
-    { name: "英语九年级全一册（人教版·旧版）", file: "英语九年级全一册 人教版.pdf", subject: "英语", grade: "九年级", volume: "全一册", type: "电子教材", size: "11MB", icon: "", edition: "旧版" },
-
-    { name: "全品作业本九上数学 第一章 特殊平行四边形", file: "全品作业本九上数学_第一章特殊平行四边形.pdf", subject: "数学", grade: "九年级", volume: "上册", type: "全品作业本", size: "8.6MB", icon: "" },
-    { name: "全品作业本九上数学 第二章 一元二次方程", file: "全品作业本九上数学_第二章一元二次方程.pdf", subject: "数学", grade: "九年级", volume: "上册", type: "全品作业本", size: "7.8MB", icon: "" },
-    { name: "全品作业本九上数学 第三章 概率的进一步认识", file: "全品作业本九上数学_第三章概率的进一步认识.pdf", subject: "数学", grade: "九年级", volume: "上册", type: "全品作业本", size: "9.5MB", icon: "" },
-    { name: "全品作业本九上数学 第四章 图形的相似", file: "全品作业本九上数学_第四章图形的相似.pdf", subject: "数学", grade: "九年级", volume: "上册", type: "全品作业本", size: "2.4MB", icon: "" },
-    { name: "全品作业本九上数学 第五章 投影与视图", file: "全品作业本九上数学_第五章投影与视图.pdf", subject: "数学", grade: "九年级", volume: "上册", type: "全品作业本", size: "13MB", icon: "" },
-    { name: "全品作业本九上数学 第六章 反比例函数", file: "全品作业本九上数学_第六章反比例函数.pdf", subject: "数学", grade: "九年级", volume: "上册", type: "全品作业本", size: "4.4MB", icon: "" },
-
-    { name: "全品作业本八下数学 第二章 一元一次不等式", file: "全品作业本八下数学_第二章一元一次不等式.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "全品作业本", size: "6.4MB", icon: "" },
-    { name: "全品作业本八下数学 第四章 因式分解", file: "全品作业本八下数学_第四章因式分解.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "全品作业本", size: "2.7MB", icon: "" },
-    { name: "全品作业本八下数学 第五章 分式与分式方程", file: "全品作业本八下数学_第五章分式与分式方程.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "全品作业本", size: "6.0MB", icon: "" },
-    { name: "全品作业本八下数学 第六章 平行四边形", file: "全品作业本八下数学_第六章平行四边形.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "全品作业本", size: "6.3MB", icon: "" },
-    { name: "八下数学周周清 第4期", file: "八下数学周周清_第4期.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "1.7MB", icon: "" },
-    { name: "八下数学周周清 第5期", file: "八下数学周周清_第5期.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "0.7MB", icon: "" },
-    { name: "八下数学周周清 第6期", file: "八下数学周周清_第6期.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "1.0MB", icon: "" },
-    { name: "八下数学周周清 第7期", file: "八下数学周周清_第7期.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "0.7MB", icon: "" },
-    { name: "八下数学周周清 第8期", file: "八下数学周周清_第8期.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "0.7MB", icon: "" },
-    { name: "八下数学周周清 第9期", file: "八下数学周周清_第9期.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "0.8MB", icon: "" },
-    { name: "八下数学周周清 第10期", file: "八下数学周周清_第10期.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "2.0MB", icon: "" },
-    { name: "八下数学周周清 第11期", file: "八下数学周周清_第11期.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "0.6MB", icon: "" },
-    { name: "八下数学周周清 第17期", file: "八下数学周周清_第17期.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "0.3MB", icon: "" },
-    { name: "八下数学周周清 第18期", file: "八下数学周周清_第18期.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "0.4MB", icon: "" },
-    { name: "八下数学周周清 第19期", file: "八下数学周周清_第19期.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "0.5MB", icon: "" },
-    { name: "八下数学周周清 第20期", file: "八下数学周周清_第20期.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "0.5MB", icon: "" },
-    { name: "八下数学周周清 第21期", file: "八下数学周周清_第21期.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "0.5MB", icon: "" },
-    { name: "八下数学周周清 第22期", file: "八下数学周周清_第22期.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "3.2MB", icon: "" },
-    { name: "八下数学周周清 第23期", file: "八下数学周周清_第23期.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "0.6MB", icon: "" },
-    { name: "八下数学周周清 第24期", file: "八下数学周周清_第24期.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "0.4MB", icon: "" },
-    { name: "八下数学周周清 第25期", file: "八下数学周周清_第25期.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "0.5MB", icon: "" },
-    { name: "八下数学周周清 第26期", file: "八下数学周周清_第26期.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "0.4MB", icon: "" },
-    { name: "八下数学周周清 第27期", file: "八下数学周周清_第27期.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "0.5MB", icon: "" },
-    { name: "八下数学周周清 第29期", file: "八下数学周周清_第29期.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "0.5MB", icon: "" },
-    { name: "八下数学周周清 第30期", file: "八下数学周周清_第30期.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "0.8MB", icon: "" },
-    { name: "八下数学周周清 第31期", file: "八下数学周周清_第31期.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "0.7MB", icon: "" },
-    { name: "八下数学周周清 第32期", file: "八下数学周周清_第32期.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "0.6MB", icon: "" },
-    { name: "八下数学周周清 第36期", file: "八下数学周周清_第36期.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "1.8MB", icon: "" },
-    { name: "八下数学 平行四边形专题训练", file: "八下数学_平行四边形专题训练.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "0.6MB", icon: "" },
-    { name: "八下数学期中试卷 参考答案", file: "八下数学期中试卷_参考答案.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "0.6MB", icon: "" },
-    { name: "莲湖区2022-2023八下期末数学试题", file: "莲湖区2022-2023八下期末数学试题.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "1.3MB", icon: "" },
-    { name: "八年级数学期末模拟卷", file: "八年级数学期末模拟卷.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "试卷", size: "1.6MB", icon: "" },
-
-    { name: "七上数学 一元一次方程测试", file: "七上数学_一元一次方程测试.pdf", subject: "数学", grade: "七年级", volume: "上册", type: "试卷", size: "1.1MB", icon: "" },
-    { name: "七上数学 12月4日测试题", file: "七上数学_12月4日测试题.pdf", subject: "数学", grade: "七年级", volume: "上册", type: "试卷", size: "0.7MB", icon: "" },
-    { name: "七上数学 12月18日测试卷", file: "七上数学_12月18日测试卷.pdf", subject: "数学", grade: "七年级", volume: "上册", type: "试卷", size: "1.8MB", icon: "" },
-
-    { name: "二次函数专题1 求目标点横纵比大小", file: "二次函数专题1_求目标点横纵比大小.pdf", subject: "数学", grade: "中考", volume: "全一册", type: "专题训练", size: "4.0MB", icon: "" },
-    { name: "二次函数专题2 平移二次函数", file: "二次函数专题2_平移二次函数.pdf", subject: "数学", grade: "中考", volume: "全一册", type: "专题训练", size: "3.9MB", icon: "" },
-    { name: "二次函数专题3 配方法求最值", file: "二次函数专题3_配方法求最值.pdf", subject: "数学", grade: "中考", volume: "全一册", type: "专题训练", size: "1.2MB", icon: "" },
-    { name: "2024交大附中1-6模 二次函数应用题", file: "2024交大附中1-6模_二次函数应用题.pdf", subject: "数学", grade: "中考", volume: "全一册", type: "专题训练", size: "0.6MB", icon: "" },
-    { name: "2024师大附中1-9模 二次函数选择题", file: "2024师大附中1-9模_二次函数选择题.pdf", subject: "数学", grade: "中考", volume: "全一册", type: "专题训练", size: "0.5MB", icon: "" },
-    { name: "2024西工大附中1-9模 二次函数综合题", file: "2024西工大附中1-9模_二次函数综合题.pdf", subject: "数学", grade: "中考", volume: "全一册", type: "专题训练", size: "1.1MB", icon: "" },
-    { name: "2024西工大附中1-9模 二次函数选择题", file: "2024西工大附中1-9模_二次函数选择题.pdf", subject: "数学", grade: "中考", volume: "全一册", type: "专题训练", size: "0.7MB", icon: "" },
-    { name: "2024西工大附中1-9模 三角函数测高题", file: "2024西工大附中1-9模_三角函数测高题.pdf", subject: "数学", grade: "中考", volume: "全一册", type: "专题训练", size: "5.8MB", icon: "" },
-    { name: "2025铁一中1-8模 三角函数测高题", file: "2025铁一中1-8模_三角函数测高题.pdf", subject: "数学", grade: "中考", volume: "全一册", type: "专题训练", size: "1.4MB", icon: "" },
-    { name: "2025陕师大附中1-9模 三角函数测高大题", file: "2025陕师大附中1-9模_三角函数测高大题.pdf", subject: "数学", grade: "中考", volume: "全一册", type: "专题训练", size: "1.7MB", icon: "" },
-    { name: "三角函数计算练习", file: "三角函数计算练习.pdf", subject: "数学", grade: "中考", volume: "全一册", type: "专题训练", size: "0.2MB", icon: "" },
-    { name: "一元二次方程 传染问题", file: "一元二次方程_传染问题.pdf", subject: "数学", grade: "中考", volume: "全一册", type: "专题训练", size: "0.8MB", icon: "" },
-    { name: "一元二次方程 利润每每问题", file: "一元二次方程_利润每每问题.pdf", subject: "数学", grade: "中考", volume: "全一册", type: "专题训练", size: "0.9MB", icon: "" },
-    { name: "一元二次方程 围栏问题", file: "一元二次方程_围栏问题.pdf", subject: "数学", grade: "中考", volume: "全一册", type: "专题训练", size: "0.5MB", icon: "" },
-    { name: "解一元二次方程计算练习", file: "解一元二次方程计算练习.pdf", subject: "数学", grade: "中考", volume: "全一册", type: "专题训练", size: "0.2MB", icon: "" },
-    { name: "韦达定理专练", file: "韦达定理专练.pdf", subject: "数学", grade: "中考", volume: "全一册", type: "专题训练", size: "0.2MB", icon: "" },
-    { name: "2026年陕西省中考数学试题", file: "2026年陕西省中考数学试题.pdf", subject: "数学", grade: "中考", volume: "全一册", type: "试卷", size: "1.2MB", icon: "" },
-
-    { name: "高中数学A版 必修第一册", file: "高中数学A版_数学 必修 第一册（A版）.pdf", subject: "高中数学", grade: "高中", volume: "全一册", type: "电子教材", size: "22MB", icon: "" },
-    { name: "高中数学A版 必修第二册", file: "高中数学A版_数学 必修 第二册（A版）.pdf", subject: "高中数学", grade: "高中", volume: "全一册", type: "电子教材", size: "16MB", icon: "" },
-    { name: "高中数学A版 选择性必修第一册", file: "高中数学A版_数学 选择性必修 第一册（A版）.pdf", subject: "高中数学", grade: "高中", volume: "全一册", type: "电子教材", size: "20MB", icon: "" },
-    { name: "高中数学A版 选择性必修第二册", file: "高中数学A版_数学 选择性必修 第二册（A版）.pdf", subject: "高中数学", grade: "高中", volume: "全一册", type: "电子教材", size: "16MB", icon: "" },
-    { name: "高中数学A版 选择性必修第三册", file: "高中数学A版_数学 选择性必修 第三册（A版）.pdf", subject: "高中数学", grade: "高中", volume: "全一册", type: "电子教材", size: "20MB", icon: "" },
-    { name: "高中数学B版 必修第一册", file: "高中数学B版_数学 必修 第一册（B版）.pdf", subject: "高中数学", grade: "高中", volume: "全一册", type: "电子教材", size: "15MB", icon: "" },
-    { name: "高中数学B版 必修第二册", file: "高中数学B版_数学 必修 第二册（B版）.pdf", subject: "高中数学", grade: "高中", volume: "全一册", type: "电子教材", size: "18MB", icon: "" },
-    { name: "高中数学B版 必修第三册", file: "高中数学B版_数学 必修 第三册（B版）.pdf", subject: "高中数学", grade: "高中", volume: "全一册", type: "电子教材", size: "16MB", icon: "" },
-    { name: "高中数学B版 必修第四册", file: "高中数学B版_数学 必修 第四册（B版）.pdf", subject: "高中数学", grade: "高中", volume: "全一册", type: "电子教材", size: "15MB", icon: "" },
-    { name: "高中数学B版 选择性必修第一册", file: "高中数学B版_数学 选择性必修 第一册（B版）.pdf", subject: "高中数学", grade: "高中", volume: "全一册", type: "电子教材", size: "15MB", icon: "" },
-    { name: "高中数学B版 选择性必修第二册", file: "高中数学B版_数学 选择性必修 第二册（B版）.pdf", subject: "高中数学", grade: "高中", volume: "全一册", type: "电子教材", size: "21MB", icon: "" },
-    { name: "高中数学B版 选择性必修第三册", file: "高中数学B版_数学 选择性必修 第三册（B版）.pdf", subject: "高中数学", grade: "高中", volume: "全一册", type: "电子教材", size: "12MB", icon: "" },
-    { name: "数学九年级下册（北师大版·新版）", downloadUrl: "https://github.com/Cyrus-Nebula/nebula-eduhub/releases/download/materials/2024.pdf", previewFile: "数学九年级下册（北师大版·2024新版）_预览版.pdf", subject: "数学", grade: "九年级", volume: "下册", type: "电子教材", size: "47MB", icon: "", edition: "新版", version: "北师大版", tagColor: "green" },
-];
-
-var xhsNotes = [
-    {
-        "index": 1,
-        "title": "Unit 8 More than a Game（语法讲解）",
-        "desc": "",
-        "url": "https://xhslink.cn/o/3X5sy2KH3zb",
-        "note_id": "6a8a4c9900000000170006aa"
-    },
-    {
-        "index": 2,
-        "title": "Unit 7 Feel the Rhythm (语法讲练)",
-        "desc": "",
-        "url": "https://xhslink.cn/o/9tjg9Np1Hzs",
-        "note_id": "6a80390d000000002403e06b"
-    },
-    {
-        "index": 3,
-        "title": "2026年湖北中考语文试卷",
-        "desc": "2026年湖北中考语文试卷（除武汉地区适用） 获取方式看P12页图 回复关键词“003”",
-        "url": "https://xhslink.cn/o/A6srH6aLBXZ",
-        "note_id": "6a7bf1200000000008013912"
-    },
-    {
-        "index": 4,
-        "title": "2026年陕西中考语文试卷",
-        "desc": "2026年陕西省初中学业水平考试语文试卷 关键词“002” 获取方法看我主页置顶内容",
-        "url": "https://xhslink.cn/o/8dY59N7XtBM",
-        "note_id": "6a795a9000000000220318c3"
-    },
-    {
-        "index": 5,
-        "title": "新九上英语单词表（官方版）",
-        "desc": "这个单词表和大家开学后拿到的是一样的哦 总体难度不大，基本上是以前学过的单词的变形，所以不用担心，认真学没有太大的问题 课本可通过新华书店自行购买",
-        "url": "https://xhslink.cn/o/7Ih5PeClTI3",
-        "note_id": "6a72b390000000002402c7e3"
-    },
-    {
-        "index": 6,
-        "title": "Unit 6 Beyond Earth（语法讲练）",
-        "desc": "",
-        "url": "https://xhslink.cn/o/14w9mXhH98g",
-        "note_id": "6a6abce7000000000503a59a"
-    },
-    {
-        "index": 7,
-        "title": "Unit 5 Power of Ideas（语法讲练）",
-        "desc": "",
-        "url": "https://xhslink.cn/o/3nqgmMVqee5",
-        "note_id": "6a6aba440000000001003e03"
-    },
-    {
-        "index": 8,
-        "title": "2026年陕西省中考数学试题",
-        "desc": "2026陕西中考数学真题 注：文件排版经过作者的修改",
-        "url": "https://xhslink.cn/o/3DAHQDqtNqr",
-        "note_id": "6a6ab043000000000401eeb9"
-    },
-    {
-        "index": 9,
-        "title": "Unit 4 Our Memory（语法讲练）",
-        "desc": "",
-        "url": "https://xhslink.cn/o/4QMRoKopeji",
-        "note_id": "6a697369000000000401cd3b"
-    },
-    {
-        "index": 10,
-        "title": "Unit 3 Smart Learning（语法讲练）",
-        "desc": "",
-        "url": "https://xhslink.cn/o/2cB1xW3veHv",
-        "note_id": "6a60aecb000000000402b314"
-    },
-    {
-        "index": 11,
-        "title": "新课表人教版英语九年级上册丨Unit2 单词表",
-        "desc": "九年级学生必收藏！九上Unit2单词+补充整理，无多余排版、纯干货、直接打印背诵！！！带序号的是课本上的单词哦 （单纯资料分享，无不良引导，无任何违规行为） 「关注我，获取无水印高清资料」",
-        "url": "https://xhslink.cn/o/Ahv52NJHTEm",
-        "note_id": "6a548bee000000001700a73d"
-    },
-    {
-        "index": 12,
-        "title": "Unit 2 Inspire People （语法讲解）",
-        "desc": "",
-        "url": "https://xhslink.cn/o/7wAjVqglP3J",
-        "note_id": "6a5397a10000000017029fa3"
-    },
-    {
-        "index": 13,
-        "title": "Unit 1 The Changing World (语法讲练)",
-        "desc": "九年级学生必收藏！九上Unit 1Grammar讲解+补充练习，无多余排版、纯干货、直接打印学习！！！（单纯资料分享，无不良引导，无任何违规行为）",
-        "url": "https://xhslink.cn/o/8qu3XFn5zYj",
-        "note_id": "6a53802d000000001c0254c0"
-    },
-    {
-        "index": 14,
-        "title": "新课标人教版九年级上册｜Unit 1单词表！",
-        "desc": "九年级学生必收藏！九上Unit 1单词+补充整理，无多余排版、纯干货、直接打印背诵！！！（单纯资料分享，无不良引导，无任何违规行为）",
-        "url": "https://xhslink.cn/o/171n3FZ2ku0",
-        "note_id": "6a533f44000000001700a53d"
-    },
-    {
-        "index": 15,
-        "title": "小红书精选资料笔记",
-        "desc": "",
-        "url": "https://xhslink.cn/o/5qSsK8B8CkJ",
-        "note_id": "6a507768000000001702c814"
-    },
-    {
-        "index": 16,
-        "title": "八下人教英语新版改版单词表",
-        "desc": "真的很难！！！快背起来。（有一点高中词汇和雅思词汇，但不多，同学们不用害怕） 单词音频随官方发布时间发表，在单元笔记的下面",
-        "url": "https://xhslink.cn/o/58sLmDLENhv",
-        "note_id": "6982026b0000000022039bf8"
-    },
-    {
-        "index": 17,
-        "title": "八下新版英语Unit 1笔记",
-        "desc": "正式版八下人教英语教材 音频链接：https:\\u002F\\u002Fpan.quark.cn\\u002Fs\\u002F0798a8cfe2c2",
-        "url": "https://xhslink.cn/o/A1xvqFEbWoz",
-        "note_id": "6981a17b000000002102be17"
-    }
-];
 
 function loadXhs(filter = "") {
     var box = document.getElementById("xhsContainer");
@@ -455,12 +203,12 @@ function loadXhs(filter = "") {
         <div class="material-card">
             <div class="material-icon" style="background-image:url('${cover}');"></div>
             <div class="material-info">
-                <div class="material-name">${n.title}</div>
-                <div class="material-meta">${desc}</div>
+                <div class="material-name">${escapeHtml(n.title)}</div>
+                <div class="material-meta">${escapeHtml(desc)}</div>
             </div>
             <div class="material-actions">
-                <a href="${n.url}" target="_blank" class="material-btn btn-preview">预览</a>
-                <a href="${n.url}" target="_blank" class="material-btn btn-download">获取</a>
+                <a href="${n.url}" target="_blank" rel="noopener noreferrer" class="material-btn btn-preview">预览</a>
+                <a href="${n.url}" target="_blank" rel="noopener noreferrer" class="material-btn btn-download">获取</a>
             </div>
         </div>`;
     });
@@ -473,23 +221,23 @@ function loadXhs(filter = "") {
 function loadNewest() {
     var box = document.getElementById("latestContainer");
     if (!box) return;
-    var newest = materials[materials.length - 1];
-    var pool = materials.slice(-20, -1);
-    pool.sort(function() { return Math.random() - 0.5; });
-    var list = [newest].concat(pool.slice(0, 7));
+    var sorted = materials.slice().sort(function(a, b) {
+        return new Date(b.date) - new Date(a.date);
+    });
+    var list = sorted.slice(0, 8);
     var html = '<div class="material-grid">';
     list.forEach(function(m) {
         var isXhs = m.name === "2026年陕西省中考数学试题";
-        var xhsBtn = isXhs ? '<a href="https://xhslink.cn/o/3DAHQDqtNqr" target="_blank" class="material-btn btn-preview xhs-inline-btn">小红书</a>' : '';
+        var xhsBtn = isXhs ? '<a href="https://xhslink.cn/o/3DAHQDqtNqr" target="_blank" rel="noopener noreferrer" class="material-btn btn-preview xhs-inline-btn">小红书</a>' : '';
         var previewBtn = '';
         var downloadBtn = '';
         var tag = '';
         if (m.downloadUrl) {
-            downloadBtn = `<a href="${m.downloadUrl}" target="_blank" class="material-btn btn-download">下载</a>`;
+            downloadBtn = `<a href="${m.downloadUrl}" target="_blank" rel="noopener noreferrer" class="material-btn btn-download">下载</a>`;
             if (m.previewFile) {
                 var pp = pathOf({ ...m, file: m.previewFile });
                 var ep = encodeURIComponent(pp).replace(/%2F/g, '/');
-                previewBtn = `<a href="${ep}" target="_blank" class="material-btn btn-preview">预览</a>`;
+                previewBtn = `<a href="${ep}" target="_blank" rel="noopener noreferrer" class="material-btn btn-preview">预览</a>`;
             }
             if (m.tagColor === 'red') tag = '<img src="images/textbook_tag_red.png" class="textbook-tag" alt="">';
             else if (m.tagColor === 'green') tag = '<img src="images/textbook_tag_green.png" class="textbook-tag" alt="">';
@@ -499,9 +247,9 @@ function loadNewest() {
             if (m.previewFile) {
                 var pp = pathOf({ ...m, file: m.previewFile });
                 var ep = encodeURIComponent(pp).replace(/%2F/g, '/');
-                previewBtn = `<a href="${ep}" target="_blank" class="material-btn btn-preview">预览</a>`;
+                previewBtn = `<a href="${ep}" target="_blank" rel="noopener noreferrer" class="material-btn btn-preview">预览</a>`;
             } else {
-                previewBtn = `<a href="${enc}" target="_blank" class="material-btn btn-preview">预览</a>`;
+                previewBtn = `<a href="${enc}" target="_blank" rel="noopener noreferrer" class="material-btn btn-preview">预览</a>`;
             }
             downloadBtn = `<a href="${enc}" download class="material-btn btn-download">下载</a>`;
         }
@@ -509,8 +257,8 @@ function loadNewest() {
         <div class="material-card">
             <div class="material-icon" style="background-image:url('${getCoverForSubject(m.subject)}');"></div>
             <div class="material-info">
-                <div class="material-name">${m.name}${tag}</div>
-                <div class="material-meta">${m.subject} · ${m.grade} · ${m.volume} · ${m.type}${m.size ? ' · ' + m.size : ''}${isXhs ? ' · 小红书同步更新' : ''}</div>
+                <div class="material-name">${escapeHtml(m.name)}${tag}</div>
+                <div class="material-meta">${escapeHtml(m.subject)} · ${escapeHtml(m.grade)} · ${escapeHtml(m.volume)} · ${escapeHtml(m.type)}${m.size ? ' · ' + escapeHtml(m.size) : ''}${isXhs ? ' · 小红书同步更新' : ''}</div>
             </div>
             <div class="material-actions">
                 ${xhsBtn}
