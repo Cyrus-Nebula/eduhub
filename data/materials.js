@@ -48,7 +48,7 @@ var materials = [
 { name: "数学七年级下册（北师大版·新版）", file: "数学七年级下册 北师大版.pdf", subject: "数学", grade: "七年级", volume: "下册", type: "电子教材", size: "22MB", icon: "", edition: "新版" , date: "2024-12-10"},
 { name: "数学八年级上册（北师大版·新版）", file: "数学八年级上册 北师大版.pdf", subject: "数学", grade: "八年级", volume: "上册", type: "电子教材", size: "11MB", icon: "", edition: "新版" , date: "2024-06-10"},
 { name: "数学八年级下册（北师大版·新版）", file: "数学八年级下册  北师大版.pdf", subject: "数学", grade: "八年级", volume: "下册", type: "电子教材", size: "22MB", icon: "", edition: "新版" , date: "2025-01-10"},
-{ name: "数学九年级上册（北师大版·新版）", file: "数学九年级上册 北师大版.pdf", subject: "数学", grade: "九年级", volume: "上册", type: "电子教材", size: "23MB", icon: "", edition: "新版" , date: "2025-06-10"},
+{ name: "数学九年级上册（北师大版·新版）", downloadUrl: "https://github.com/Cyrus-Nebula/nebula-eduhub/releases/download/materials/Math_G9_shang_bsd_2024.pdf", previewFile: "数学九年级上册（北师大版·2022新版）_预览版.pdf", subject: "数学", grade: "九年级", volume: "上册", type: "电子教材", size: "132MB", icon: "", edition: "新版", version: "北师大版", tagColor: "green", date: "2026-08-30" },
 { name: "英语八年级上册（人教版·旧版）", file: "英语八年级上册 人教版.pdf", subject: "英语", grade: "八年级", volume: "上册", type: "电子教材", size: "5.0MB", icon: "", edition: "旧版" , date: "2022-01-01"},
 { name: "英语八年级下册（人教版·旧版）", file: "英语八年级下册 人教版.pdf", subject: "英语", grade: "八年级", volume: "下册", type: "电子教材", size: "6.6MB", icon: "", edition: "旧版" , date: "2022-01-01"},
 { name: "英语九年级全一册（人教版·旧版）", file: "英语九年级全一册 人教版.pdf", subject: "英语", grade: "九年级", volume: "全一册", type: "电子教材", size: "11MB", icon: "", edition: "旧版" , date: "2022-06-01"},
