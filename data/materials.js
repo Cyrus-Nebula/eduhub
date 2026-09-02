@@ -93,6 +93,7 @@ var materials = [
 { name: "七上数学 一元一次方程测试", file: "七上数学_一元一次方程测试.pdf", subject: "数学", grade: "七年级", volume: "上册", type: "试卷", size: "1.1MB", icon: "" , date: "2025-12-15"},
 { name: "七上数学 12月4日测试题", file: "七上数学_12月4日测试题.pdf", subject: "数学", grade: "七年级", volume: "上册", type: "试卷", size: "0.7MB", icon: "" , date: "2025-12-15"},
 { name: "七上数学 12月18日测试卷", file: "七上数学_12月18日测试卷.pdf", subject: "数学", grade: "七年级", volume: "上册", type: "试卷", size: "1.8MB", icon: "" , date: "2025-12-15"},
+{ name: "九上数学周周清 第1期", file: "九上数学周周清_第1期.pdf", subject: "数学", grade: "九年级", volume: "上册", type: "试卷", size: "0.5MB", icon: "" , date: "2026-09-02"},
 { name: "二次函数专题1 求目标点横纵比大小", file: "二次函数专题1_求目标点横纵比大小.pdf", subject: "数学", grade: "中考", volume: "全一册", type: "专题训练", size: "4.0MB", icon: "" , date: "2026-03-01"},
 { name: "二次函数专题2 平移二次函数", file: "二次函数专题2_平移二次函数.pdf", subject: "数学", grade: "中考", volume: "全一册", type: "专题训练", size: "3.9MB", icon: "" , date: "2026-03-01"},
 { name: "二次函数专题3 配方法求最值", file: "二次函数专题3_配方法求最值.pdf", subject: "数学", grade: "中考", volume: "全一册", type: "专题训练", size: "1.2MB", icon: "" , date: "2026-03-01"},
