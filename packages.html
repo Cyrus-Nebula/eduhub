@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="学科网网校通账号开通，全科/单科套餐可选，绑定自己手机号，海量资源免费下载。">
-    <title>网校通服务-Nebula EduHub</title>
+    <meta name="description" content="个人试卷导出助手：把组卷网、菁优网整份试卷一次导出成 Word 与 PDF，单文件油猴脚本，免费无广告。">
+    <title>试卷导出助手-Nebula EduHub</title>
     <link rel="icon" type="image/png" href="favicon-light-32.png?v=3" data-favicon>
     <link rel="icon" href="favicon.ico?v=5" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico?v=5" type="image/x-icon">
@@ -25,7 +25,7 @@
             <li><a href="index.html">首页</a></li>
             <li><a href="search.html">资料汇总</a></li>
             <li><a href="tools.html">下载工具</a></li>
-            <li><a href="packages.html" class="active">网校通服务</a></li>
+            <li><a href="packages.html" class="active">试卷导出助手</a></li>
             <li><a href="about.html">关于本站</a></li>
             <li><a href="about.html#contact" class="nav-cta">联系站主</a></li>
         </ul>
@@ -35,139 +35,84 @@
 
 <section class="page-hero">
     <div class="container">
-        <div class="badge">学科网网校通</div>
-        <h1>网校通<span>价格方案</span></h1>
-        <p>开通自己的账号，除第三方代售资源外全部免费下载。正规渠道，安全稳定。</p>
+        <div class="badge">免费油猴脚本</div>
+        <h1>个人试卷<span>导出助手</span></h1>
+        <p>把组卷网、菁优网的整份试卷，一次导出成能直接打印的 Word 与 PDF。单文件脚本，免费、无广告、不收集使用数据。</p>
     </div>
 </section>
 
-<!-- 套餐卡片 -->
 <section class="section mt-0">
     <div class="container">
-        <div class="package-grid">
-            <!-- 标准版 -->
-            <div class="package-card">
-                <h4>标准版</h4>
-                <div class="desc">老师/学生首选</div>
-                <div class="price">¥230<small>/年</small></div>
-                <div class="unit">40份/天 · 全科</div>
-                <ul>
-                    <li>每日40份下载额度</li>
-                    <li>全科资源免费下载</li>
-                    <li>绑定自己手机号</li>
-                    <li>实名认证后开通</li>
-                    <li>优先响应售后</li>
-                    <li>支持月付 ¥50/月</li>
+        <div class="tool-grid">
+            <div class="tool-card">
+                <div class="tool-icon icon-bg-green"><i class="fa-solid fa-file-export text-green"></i></div>
+                <h4>整卷一次导出</h4>
+                <p>在试卷页点一下浮球，题目、配图、公式、答案与解析一起进文档，不用一题题复制、不用截图拼版。</p>
+                <ul class="tool-features">
+                    <li>组卷网 / 菁优网试卷页直接识别</li>
+                    <li>导出 Word（公式可编辑）与 PDF</li>
+                    <li>图片真正内嵌，离线打开仍在原位</li>
+                    <li>A4 正式试卷排版，卷尾答案另起一页</li>
                 </ul>
-                <a href="about.html#contact" class="btn btn-outline">联系站主</a>
-            </div>
-
-            <!-- 基础版（推荐） -->
-            <div class="package-card featured">
-                <div class="badge">推荐</div>
-                <h4>基础版</h4>
-                <div class="desc">适合个人轻度使用</div>
-                <div class="price">¥150<small>/年</small></div>
-                <div class="unit">20份/天 · 全科</div>
-                <ul>
-                    <li>每日20份下载额度</li>
-                    <li>全科资源免费下载</li>
-                    <li>绑定自己手机号</li>
-                    <li>实名认证后开通</li>
-                    <li>基础售后支持</li>
-                </ul>
-                <a href="about.html#contact" class="btn btn-primary">联系站主</a>
-            </div>
-
-            <!-- 旗舰版 -->
-            <div class="package-card">
-                <h4>旗舰版</h4>
-                <div class="desc">适合机构/重度使用</div>
-                <div class="price">¥300<small>/年</small></div>
-                <div class="unit">60份/天 · 全科</div>
-                <ul>
-                    <li>每日60份下载额度</li>
-                    <li>全科资源免费下载</li>
-                    <li>绑定自己手机号</li>
-                    <li>实名认证后开通</li>
-                    <li>专属客服支持</li>
-                    <li>长期合作优惠</li>
-                </ul>
-                <a href="about.html#contact" class="btn btn-outline">联系站主</a>
-            </div>
-        </div>
-
-        <!-- 单科价格说明 -->
-        <div class="pricing-wrap">
-            <h3>单科套餐价格表</h3>
-            <p class="sub">只需要单一学科的同学可以选单科套餐，更划算</p>
-            <div class="package-grid mt-20">
-                <div class="package-card">
-                    <h4>40份/天</h4>
-                    <div class="price">¥160<small>/年</small></div>
-                    <div class="unit">单科 · 学生首选</div>
+                <div class="tool-footer">
+                    <span class="tool-price">免费<small>· 单文件</small></span>
+                    <a class="btn btn-primary" href="https://examdownload.pages.dev" target="_blank" rel="noopener noreferrer">前往官网下载 →</a>
                 </div>
-                <div class="package-card featured">
-                    <div class="badge">推荐</div>
-                    <h4>20份/天</h4>
-                    <div class="price">¥100<small>/年</small></div>
-                    <div class="unit">单科 · 轻度使用</div>
-                </div>
-                <div class="package-card">
-                    <h4>60份/天</h4>
-                    <div class="price">¥210<small>/年</small></div>
-                    <div class="unit">单科 · 重度使用</div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-icon icon-bg-blue"><i class="fa-solid fa-tablet-screen-button text-blue"></i></div>
+                <h4>iPad / 安卓都能用</h4>
+                <p>同一份 .user.js，iPad 用 Safari + Userscripts，安卓用支持脚本的浏览器，装好后试卷页右下角出现浮球即可用。</p>
+                <ul class="tool-features">
+                    <li>iPad：Safari + Userscripts 扩展</li>
+                    <li>安卓：支持用户脚本的浏览器</li>
+                    <li>浮球可拖动，面板自动展开不越屏</li>
+                    <li>遇到验证码 / 登录失效会停下并提示</li>
+                </ul>
+                <div class="tool-footer">
+                    <span class="tool-price">免费<small>· 双端通用</small></span>
+                    <a class="btn btn-outline" href="https://examdownload.pages.dev/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97" target="_blank" rel="noopener noreferrer">查看安装教程 →</a>
                 </div>
             </div>
         </div>
 
-        <!-- 重要说明 -->
-        <div class="pricing-notes">
-            <h4>重要说明</h4>
-            <ol>
-                <li>网校通开通即产生成本，<strong>不支持试用</strong>，可选择 <strong>50元/月</strong> 按月购买。</li>
-                <li>开通前需完成实名认证，实名认证信息需与手机号一致，开通后绑定你自己的账号。</li>
-                <li>开通后可免费下载除<strong>第三方代理销售资源</strong>外的全部资源，第三方代售资源右上角或付款时有提示，需另行付费。</li>
-                <li>所有套餐均为正规渠道开通，安全稳定，售后有保障。</li>
-                <li>支持微信付款，通常几分钟内即可开通完毕。</li>
-            </ol>
+        <div class="about-content mt-30">
+            <h3>它是怎么工作的</h3>
+            <p><strong>打开试卷页：</strong>在组卷网或菁优网打开一份试卷，右下角出现圆形浮球。</p>
+            <p><strong>点浮球看诊断：</strong>面板告诉你认出了几道题、哪几题没认出、哪几处公式是图。</p>
+            <p><strong>选导出方式：</strong>只导原卷、答案附卷尾、或跟在每题后面；先走云端生成，失败自动降级本地。</p>
+            <p><strong>拿到文件：</strong>下载 .docx 或 .pdf，按正式试卷排好版，可直接打印。</p>
         </div>
 
         <div class="text-center mt-30">
-            <a href="about.html#contact" class="btn btn-primary">联系站主开通 →</a>
+            <a href="https://examdownload.pages.dev" class="btn btn-primary" target="_blank" rel="noopener noreferrer">前往个人试卷导出助手官网 →</a>
         </div>
     </div>
 </section>
 
-<!-- 使用流程 -->
 <section class="section section-alt">
     <div class="container">
         <div class="section-header">
-            <span class="section-tag">使用教程</span>
-            <h2 class="section-title">开通与使用流程</h2>
-            <p class="section-desc">简单四步，快速开通使用</p>
+            <span class="section-tag">使用流程</span>
+            <h2 class="section-title">三步开始用</h2>
+            <p class="section-desc">从下载脚本到导出第一份试卷</p>
         </div>
-
         <div class="steps">
             <div class="step-card">
                 <div class="step-number">1</div>
-                <h4>联系站主</h4>
-                <p>搜索微信号添加好友，备注"网校通"或"资料"。</p>
+                <h4>下载脚本</h4>
+                <p>到官网下载「个人试卷导出助手.user.js」，单文件，免费。</p>
             </div>
             <div class="step-card">
                 <div class="step-number">2</div>
-                <h4>选择套餐</h4>
-                <p>告知需要的套餐（全科/单科、下载额度、月付/年付），确认价格。</p>
+                <h4>装好并启用</h4>
+                <p>iPad 用 Userscripts，安卓用脚本浏览器，导入脚本并允许在组卷网/菁优网运行。</p>
             </div>
             <div class="step-card">
                 <div class="step-number">3</div>
-                <h4>付款开通</h4>
-                <p>微信转账，提供手机号完成实名认证，通常几分钟内开通完毕。</p>
-            </div>
-            <div class="step-card">
-                <div class="step-number">4</div>
-                <h4>开始使用</h4>
-                <p>登录学科网自己的账号，即可享受网校通权益，海量资源免费下载。</p>
+                <h4>打开试卷导出</h4>
+                <p>打开任意试卷页，点浮球，选导出方式，拿到 Word 或 PDF。</p>
             </div>
         </div>
     </div>
@@ -189,7 +134,7 @@
                     <li><a href="index.html">首页</a></li>
                     <li><a href="search.html">资料汇总</a></li>
                     <li><a href="tools.html">下载工具</a></li>
-                    <li><a href="packages.html">网校通服务</a></li>
+                    <li><a href="packages.html">试卷导出助手</a></li>
                     <li><a href="about.html">关于本站</a></li>
                 </ul>
             </div>
